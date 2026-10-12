@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,56 +11,117 @@
 
 <style>
 :root{
-  --paper:#f5efe4;--paper2:#e9decd;--ink:#26211e;
-  --wine:#782c39;--wine2:#a34e55;--muted:#786c62;
-  --line:#cbbba8;--white:#fffaf3
+  --paper:#f5efe4;
+  --paper2:#e9decd;
+  --ink:#26211e;
+  --wine:#782c39;
+  --wine2:#a34e55;
+  --muted:#786c62;
+  --line:#cbbba8;
+  --white:#fffaf3;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.7}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'DM Sans',sans-serif;line-height:1.7;
+}
 img{display:block;width:100%;object-fit:cover}
 a{color:inherit}
 button{font:inherit;cursor:pointer}
 ::selection{background:#d9b8b6;color:#241c1c}
 .wrap{width:min(1120px,91%);margin:auto}
 .serif{font-family:'Playfair Display',serif}
-.eyebrow{ text-transform:uppercase;letter-spacing:.19em;font-size:.72rem;color:var(--wine);font-weight:700}
+.eyebrow{
+  text-transform:uppercase;letter-spacing:.19em;font-size:.72rem;
+  color:var(--wine);font-weight:700
+}
 .small{font-size:.82rem;color:var(--muted)}
 .rule{height:1px;background:var(--line);margin:28px 0}
-.kicker{display:flex;align-items:center;gap:12px;color:var(--wine);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.kicker{
+  display:flex;align-items:center;gap:12px;
+  color:var(--wine);font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.16em;font-weight:700
+}
 .kicker:after{content:"";height:1px;background:var(--line);flex:1}
 h1,h2,h3,p{margin-top:0}
-h2{font:500 clamp(2.3rem,5vw,4.2rem)/1.08 'Playfair Display',serif;letter-spacing:-.04em;margin-bottom:18px}
+h2{
+  font:500 clamp(2.3rem,5vw,4.2rem)/1.08 'Playfair Display',serif;
+  letter-spacing:-.04em;margin-bottom:18px
+}
 h3{font:600 1.45rem/1.25 'Playfair Display',serif}
 p{margin-bottom:16px}
 section{padding:86px 0}
 
-.cover{min-height:95svh;display:flex;align-items:center;padding:40px 0 65px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.cover-grid{display:grid;grid-template-columns:1fr .9fr;gap:55px;align-items:center}
+/* PORTADA */
+.cover{
+  min-height:95svh;display:flex;align-items:center;
+  padding:40px 0 65px;position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line)
+}
+.cover-grid{
+  display:grid;grid-template-columns:1fr .9fr;
+  gap:55px;align-items:center
+}
 .issue{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wine)}
-.cover h1{font:600 clamp(3.4rem,8vw,7.4rem)/.94 'Playfair Display',serif;letter-spacing:-.065em;margin:26px 0}
+.cover h1{
+  font:600 clamp(3.4rem,8vw,7.4rem)/.94 'Playfair Display',serif;
+  letter-spacing:-.065em;margin:26px 0
+}
 .cover h1 em{color:var(--wine);font-weight:500}
 .cover-copy{max-width:490px;color:#554b44}
 .cover-art{position:relative}
-.cover-art img{height:590px;max-height:70vh;object-fit:cover;filter:sepia(.12);border-radius:48% 48% 3px 3px}
-.cover-caption{position:absolute;right:-12px;bottom:24px;max-width:220px;padding:17px;background:var(--paper);border:1px solid var(--line);font-size:.78rem;line-height:1.5}
-.cover-bottom{position:absolute;bottom:20px;left:4.5%;right:4.5%;display:flex;justify-content:space-between;gap:15px;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.cover-art img{
+  height:590px;max-height:70vh;object-fit:cover;
+  filter:sepia(.12);border-radius:48% 48% 3px 3px
+}
+.cover-caption{
+  position:absolute;right:-12px;bottom:24px;max-width:220px;
+  padding:17px;background:var(--paper);border:1px solid var(--line);
+  font-size:.78rem;line-height:1.5
+}
+.cover-bottom{
+  position:absolute;bottom:20px;left:4.5%;right:4.5%;
+  display:flex;justify-content:space-between;gap:15px;
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)
+}
 
 .intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}
-.dropcap:first-letter{float:left;font:5rem/.78 'Playfair Display',serif;color:var(--wine);padding:8px 10px 0 0}
-.quote{border-left:3px solid var(--wine);padding:10px 0 10px 22px;font:italic 1.5rem/1.45 'Playfair Display',serif;color:var(--wine);margin:28px 0}
+.dropcap:first-letter{
+  float:left;font:5rem/.78 'Playfair Display',serif;color:var(--wine);
+  padding:8px 10px 0 0
+}
+.quote{
+  border-left:3px solid var(--wine);padding:10px 0 10px 22px;
+  font:italic 1.5rem/1.45 'Playfair Display',serif;color:var(--wine);
+  margin:28px 0
+}
 .photo{margin:0;min-width:0}
 .photo img{background:var(--paper2);border:1px solid #d7c9b8}
-.photo figcaption{font-size:.76rem;line-height:1.5;color:var(--muted);padding-top:9px}
+.photo figcaption{
+  font-size:.76rem;line-height:1.5;color:var(--muted);padding-top:9px
+}
 .photo figcaption strong{display:block;color:var(--ink);font-weight:600}
-.image-note{margin-top:10px;padding:11px 13px;background:#eee3d4;border-left:2px solid var(--wine);font-size:.77rem;color:#594e46}
-.context-gallery{display:grid;grid-template-columns:1.3fr .7fr;gap:22px;margin-top:35px}
+.image-note{
+  margin-top:10px;padding:11px 13px;background:#eee3d4;
+  border-left:2px solid var(--wine);font-size:.77rem;color:#594e46
+}
+.context-gallery{
+  display:grid;grid-template-columns:1.3fr .7fr;gap:22px;margin-top:35px
+}
 .context-gallery .big img{height:390px}
 .context-stack{display:grid;gap:22px}
 .context-stack img{height:184px}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+.section-head{
+  display:flex;justify-content:space-between;align-items:end;gap:30px;
+  margin-bottom:36px
+}
 .section-head p{max-width:410px;color:var(--muted);margin-bottom:5px}
-.fashion-intro{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;margin-bottom:35px}
+.section-number{font:italic 1.2rem 'Playfair Display',serif;color:var(--wine)}
+.fashion-intro{
+  display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;
+  margin-bottom:35px
+}
 .fashion-intro img{height:420px}
 .fashion-collage{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .fashion-collage .photo:nth-child(2){margin-top:45px}
@@ -67,24 +129,42 @@ section{padding:86px 0}
 .fashion-collage img{height:360px}
 .fashion-collage .photo:nth-child(2) img{height:315px}
 .fashion-collage .photo:nth-child(3) img{height:280px}
+.pull{
+  margin:55px 0;padding:32px 0;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);text-align:center
+}
+.pull p{
+  font:italic clamp(1.7rem,4vw,3rem)/1.3 'Playfair Display',serif;
+  max-width:780px;margin:0 auto 12px
+}
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
 .detail-card{padding:23px;background:var(--white);border:1px solid var(--line)}
 .detail-card .symbol{font:2rem 'Playfair Display',serif;color:var(--wine)}
 .detail-card h3{margin:9px 0}
 .detail-card p{font-size:.9rem;color:#62564e;margin-bottom:0}
 
+/* MODA MASCULINA */
 .men-section{background:#e8ddce}
-.men-intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.men-intro{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center
+}
 .men-intro img{height:410px;object-fit:contain;background:#f6f0e7}
-.men-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:36px}
+.men-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:36px
+}
 .men-grid img{height:280px;object-fit:contain;background:#f7f1e8}
 .men-grid .photo:nth-child(2) img{object-fit:cover}
 .men-grid .photo:nth-child(3) img{object-fit:contain}
-.men-note{margin-top:30px;padding:20px 23px;border:1px solid #bba995;font-size:.88rem;color:#554a42}
+.men-note{
+  margin-top:30px;padding:20px 23px;border:1px solid #bba995;
+  font-size:.88rem;color:#554a42
+}
 .men-note strong{color:var(--wine)}
-.bike-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center;margin-top:55px}
+.bike-grid{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center;
+  margin-top:55px
+}
 .bike-grid img{height:330px}
-
 .class-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .class-grid img{height:320px}
 .class-grid article{border-top:1px solid var(--line);padding-top:18px}
@@ -95,42 +175,67 @@ section{padding:86px 0}
 .writer p{font-size:.9rem;color:#5f554d}
 .writer .dates{font-size:.75rem;letter-spacing:.08em;color:var(--wine)}
 
+/* FLOR INTERACTIVA */
 .flower-section{background:#282321;color:var(--paper)}
 .flower-section .eyebrow,.flower-section .section-number{color:#d5a3a2}
-.flower-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}
+.flower-grid{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center
+}
 .flower-grid p{color:#d5c9bc}
-.flower{width:min(390px,100%);aspect-ratio:1;margin:auto;position:relative;display:grid;place-items:center}
+.flower{
+  width:min(390px,100%);aspect-ratio:1;margin:auto;position:relative;
+  display:grid;place-items:center
+}
 .flower svg{width:100%;height:100%;overflow:visible}
 
-/* FIX: los pétalos se desvanecen sin alterar la rotación SVG */
-.petal{transition:opacity .45s ease;cursor:pointer;outline:none}
+/* No se modifica el transform original de cada pétalo del SVG.
+   Así permanecen ordenados y solo desaparecen al pulsarlos. */
+.petal{
+  transition:opacity .45s ease,filter .2s ease;
+  cursor:pointer;outline:none;
+  transform-box:view-box;
+}
 .petal:hover{filter:brightness(1.13)}
 .petal.gone{opacity:0;pointer-events:none}
 .petal:focus-visible{stroke:#fff;stroke-width:4}
 .flower-center{fill:#d9b69a;stroke:#f5dfc9;stroke-width:2}
 .flower-instruction{text-align:center;color:#cbb9a9;font-size:.78rem;margin-top:8px}
-.fact-box{min-height:190px;border:1px solid #6d5a50;padding:26px;display:flex;flex-direction:column;justify-content:center}
+.fact-box{
+  min-height:190px;border:1px solid #6d5a50;padding:26px;
+  display:flex;flex-direction:column;justify-content:center
+}
 .fact-count{color:#d5a3a2;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
 .fact-box h3{font-size:1.7rem;margin:12px 0}
 .fact-box p{margin-bottom:0}
 .flower-controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
-.flower-controls button{background:transparent;color:var(--paper);border:1px solid #87766b;padding:9px 13px;font-size:.82rem}
+.flower-controls button{
+  background:transparent;color:var(--paper);border:1px solid #87766b;
+  padding:9px 13px;font-size:.82rem
+}
 .flower-controls button:hover{background:var(--wine)}
 
+/* FUENTES */
 .sources{background:#292421;color:var(--paper);padding:48px 0}
 .sources h2{font-size:2.4rem}
 .sources a{color:#e6b9b3;overflow-wrap:anywhere}
 .sources li{margin:10px 0;font-size:.86rem}
 .sources p{color:#cdbfb2;font-size:.85rem}
-.footer{padding:20px 0;display:flex;justify-content:space-between;gap:15px;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.reveal{border:0;background:none;padding:0;color:var(--wine);text-decoration:underline;text-underline-offset:4px;font-weight:700}
+.footer{
+  padding:20px 0;display:flex;justify-content:space-between;gap:15px;
+  font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em
+}
+.reveal{
+  border:0;background:none;padding:0;color:var(--wine);
+  text-decoration:underline;text-underline-offset:4px;font-weight:700
+}
 .hidden-copy{display:none;font-size:.88rem;margin-top:12px;color:#61544a}
 .hidden-copy.open{display:block}
 
 @media(max-width:760px){
   section{padding:62px 0}
   .cover{min-height:auto;padding:48px 0 70px}
-  .cover-grid,.intro-grid,.fashion-intro,.men-intro,.flower-grid,.bike-grid{grid-template-columns:1fr;gap:30px}
+  .cover-grid,.intro-grid,.fashion-intro,.men-intro,.flower-grid,
+  .bike-grid{grid-template-columns:1fr;gap:30px}
   .cover h1{font-size:clamp(3.3rem,15vw,5.5rem)}
   .cover-art img{height:430px;max-height:none}
   .cover-caption{right:0}
@@ -142,9 +247,11 @@ section{padding:86px 0}
   .section-head{display:block}
   .section-head p{margin-top:15px}
   .fashion-collage{grid-template-columns:1fr 1fr;gap:15px}
-  .fashion-collage .photo:nth-child(2),.fashion-collage .photo:nth-child(3){margin-top:0}
+  .fashion-collage .photo:nth-child(2),
+  .fashion-collage .photo:nth-child(3){margin-top:0}
   .fashion-collage .photo:nth-child(3){grid-column:1/-1;width:75%;margin:auto}
-  .fashion-collage img,.fashion-collage .photo:nth-child(2) img,.fashion-collage .photo:nth-child(3) img{height:280px}
+  .fashion-collage img,.fashion-collage .photo:nth-child(2) img,
+  .fashion-collage .photo:nth-child(3) img{height:280px}
   .detail-grid{grid-template-columns:1fr}
   .men-grid{grid-template-columns:1fr 1fr;gap:14px}
   .men-grid .photo:last-child{grid-column:1/-1;width:80%;margin:auto}
@@ -155,12 +262,16 @@ section{padding:86px 0}
   .flower{width:min(340px,100%)}
   .footer{flex-direction:column}
 }
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .petal{transition:none}
+}
 </style>
 </head>
 
 <body>
 
-<!-- PORTADA: sin botón y sin círculo decorativo -->
+<!-- PORTADA -->
 <header class="cover" id="inicio">
   <div class="wrap cover-grid">
     <div>
@@ -172,6 +283,7 @@ section{padding:86px 0}
         a través de sus detalles.
       </p>
     </div>
+
     <div class="cover-art">
       <img
         src="https://commons.wikimedia.org/wiki/Special:Redirect/file/L%27Art%20et%20la%20Mode%2C%201898%2C%20No.%2018%2C%20XVIII%20Toilette%20en%20mousselin%2C%20RP-P-2009-3786.jpg"
@@ -182,6 +294,7 @@ section{padding:86px 0}
       </div>
     </div>
   </div>
+
   <div class="cover-bottom">
     <span>Historia · Vestuario · Literatura</span>
     <span>Desliza para descubrir ↓</span>
@@ -190,20 +303,27 @@ section{padding:86px 0}
 
 <main>
 
+<!-- 01 · CONTEXTO -->
 <section id="contexto">
   <div class="wrap">
     <div class="kicker">01 · El momento histórico</div>
+
     <div class="intro-grid" style="margin-top:25px">
       <div>
         <h2>Un país frente a un cambio de época.</h2>
         <p class="small">España a finales del siglo XIX</p>
+
         <figure class="photo">
           <img loading="lazy"
             src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898%2C%20Panorama%20nacional%2C%20Vista%20panor%C3%A1mica%20de%20Madrid%2C%20Compa%C3%B1y.jpg"
             alt="Vista panorámica histórica de Madrid">
-          <figcaption><strong>Madrid, en imágenes de época</strong>La ciudad permite acercarnos al ambiente urbano de aquellos años.</figcaption>
+          <figcaption>
+            <strong>Madrid, en imágenes de época</strong>
+            La ciudad permite acercarnos al ambiente urbano de aquellos años.
+          </figcaption>
         </figure>
       </div>
+
       <div>
         <p class="dropcap">
           El año 1898 fue especialmente importante para España. Tras la guerra
@@ -225,7 +345,9 @@ section{padding:86px 0}
           La historia no solo está en los grandes acontecimientos: también
           aparece en las calles, los objetos y la ropa de la gente.
         </div>
-        <p class="small">Esta revista conecta el contexto de 1898 con la moda y la cultura visual de su época.</p>
+        <p class="small">
+          Esta revista conecta el contexto de 1898 con la moda y la cultura visual de su época.
+        </p>
       </div>
     </div>
 
@@ -233,27 +355,39 @@ section{padding:86px 0}
       <figure class="photo big">
         <img loading="lazy"
           src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898-03-26%2C%20Blanco%20y%20Negro%2C%20Exposici%C3%B3n%20p%C3%BAblica%20de%20las%20listas%20electorales%20en%20la%20Plaza%20Mayor%20de%20Madrid%2C%20Irigoyen.jpg"
-          alt="Escena urbana histórica de Madrid">
-        <figcaption><strong>La vida pública</strong>Las calles y plazas eran escenarios de comercio, encuentros y actividad política.</figcaption>
+          alt="Escena urbana histórica relacionada con la vida pública de Madrid">
+        <figcaption>
+          <strong>La vida pública</strong>
+          Las calles y plazas eran escenarios de comercio, encuentros y actividad política.
+        </figcaption>
       </figure>
+
       <div class="context-stack">
         <figure class="photo">
           <img loading="lazy"
             src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898-04-02%2C%20Blanco%20y%20Negro%2C%20Un%20puesto%20de%20pescado.jpg"
             alt="Ilustración histórica de un puesto de pescado">
-          <figcaption><strong>El día a día</strong>El comercio formaba parte de la vida urbana.</figcaption>
+          <figcaption>
+            <strong>El día a día</strong>
+            El comercio formaba parte de la vida urbana.
+          </figcaption>
         </figure>
+
         <figure class="photo">
           <img loading="lazy"
             src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898-01-01%2C%20Blanco%20y%20Negro%2C%20El%20agarrao%2C%20Baile%20madrile%C3%B1o%2C%20Huertas%2001.jpg"
             alt="Ilustración de un baile madrileño de época">
-          <figcaption><strong>Costumbres y ocio</strong>Las ilustraciones también registraban escenas de la sociedad.</figcaption>
+          <figcaption>
+            <strong>Costumbres y ocio</strong>
+            Las ilustraciones también registraban escenas de la sociedad.
+          </figcaption>
         </figure>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 02 · MODA FEMENINA -->
 <section id="moda">
   <div class="wrap">
     <div class="section-head">
@@ -261,176 +395,445 @@ section{padding:86px 0}
         <div class="kicker">02 · Vestir en la época</div>
         <h2>La moda femenina</h2>
       </div>
-      <p>Silhuetas marcadas, faldas largas y detalles cuidadosamente elegidos. La vestimenta cambiaba según la ocasión, la región y los recursos de cada familia.</p>
+      <p>
+        Siluetas marcadas, faldas largas y detalles cuidadosamente elegidos.
+        La vestimenta cambiaba según la ocasión, la región y los recursos de cada familia.
+      </p>
     </div>
 
     <div class="fashion-intro">
       <figure class="photo">
         <img loading="lazy"
-          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Het%20eerste%20mantelpak%20Le%20Coquet%2C%201898%2C%20No.%202739%2C%20Nr.%2039%20Garnitures%20de%20la%20Maison%2C%20RP-P-2009-3783.jpg"
-          alt="Lámina europea de moda femenina de 1898">
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20la%20ville%20de%20Lyon%2C%20Naples%2C%201898-1899%2C%20No.%208909%20Haute%20Nouveaut%C3%A9%2C%20RP-P-2009-3790.jpg"
+          alt="Lámina europea de moda femenina de finales del siglo XIX">
         <figcaption>
           <strong>Una silueta elegante</strong>
-          Lámina de moda europea de 1898.
-          <div class="image-note">Estas ilustraciones muestran modelos difundidos en Europa, no una fotografía de mujeres españolas.</div>
+          Lámina de moda europea de 1898–1899.
+          <div class="image-note">
+            Imagen tomada de las tendencias europeas. Estas ilustraciones muestran modelos difundidos en Europa, no una fotografía de mujeres españolas.
+          </div>
         </figcaption>
       </figure>
+
       <div>
         <p class="eyebrow">Forma y estructura</p>
         <h3>La ropa construía una silueta.</h3>
-        <p>En los sectores acomodados seguían siendo habituales los vestidos estructurados, los corsés, las blusas de cuello alto y las faldas largas. Durante la década, las mangas voluminosas de comienzos de los noventa fueron perdiendo protagonismo.</p>
-        <p>Los sombreros, guantes, cuellos, encajes y adornos podían completar el conjunto. No era una única moda universal: la ropa cotidiana dependía del trabajo, el clima, el lugar y el dinero disponible.</p>
+        <p>
+          En los sectores acomodados seguían siendo habituales los vestidos
+          estructurados, los corsés, las blusas de cuello alto y las faldas
+          largas. Durante la década, las mangas voluminosas de comienzos de
+          los noventa fueron perdiendo protagonismo.
+        </p>
+        <p>
+          Los sombreros, guantes, cuellos, encajes y adornos podían completar
+          el conjunto. No era una única moda universal: la ropa cotidiana
+          dependía del trabajo, el clima, el lugar y el dinero disponible.
+        </p>
         <button class="reveal" onclick="toggleText('womenMore',this)">Descubrir más +</button>
-        <p class="hidden-copy" id="womenMore">La moda de París tenía gran influencia internacional, pero las tendencias llegaban a otros lugares de manera desigual. En España se adoptaban y adaptaban novedades europeas, especialmente entre las clases con más recursos y acceso a tiendas y revistas.</p>
+        <p class="hidden-copy" id="womenMore">
+          La moda de París tenía gran influencia internacional, pero las
+          tendencias llegaban a otros lugares de manera desigual. En España
+          se adoptaban y adaptaban novedades europeas, especialmente entre
+          las clases con más recursos y acceso a tiendas y revistas.
+        </p>
       </div>
     </div>
 
     <div class="fashion-collage">
       <figure class="photo">
-        <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Het%20eerste%20mantelpak%20Le%20Coquet%2C%201898%2C%20No.%202739%2C%20Nr.%2039%20Garnitures%20de%20la%20Maison%2C%20RP-P-2009-3783.jpg" alt="Ilustración de un conjunto femenino de 1898">
-        <figcaption><strong>El conjunto completo</strong>Las prendas se elegían como parte de una apariencia coordinada.</figcaption>
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Het%20eerste%20mantelpak%20Le%20Coquet%2C%201898%2C%20No.%202739%2C%20Nr.%2039%20Garnitures%20de%20la%20Maison%2C%20RP-P-2009-3783.jpg"
+          alt="Ilustración de un conjunto femenino de 1898">
+        <figcaption>
+          <strong>El conjunto completo</strong>
+          Las prendas se elegían como parte de una apariencia coordinada.
+        </figcaption>
       </figure>
+
       <figure class="photo">
-        <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Costumes%20de%20Cyclistes%205-6-1898%2C%20nr.%203373%2C%20RP-P-2009-3785.jpg" alt="Lámina de vestimenta para ciclismo de 1898">
-        <figcaption><strong>Vestirse para moverse</strong>La ropa para montar en bicicleta respondía a nuevas actividades.</figcaption>
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Costumes%20de%20Cyclistes%205-6-1898%2C%20nr.%203373%2C%20RP-P-2009-3785.jpg"
+          alt="Lámina de vestimenta para ciclismo de 1898">
+        <figcaption>
+          <strong>Vestirse para moverse</strong>
+          La ropa para montar en bicicleta respondía a nuevas actividades.
+        </figcaption>
       </figure>
+
       <figure class="photo">
-        <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/De%20Gracieuse%2C%20Ge%C3%AFllustreerde%20Aglaja%2C%20april%201898%2C%20No.%203511%2C%20RP-P-OB-103.077.jpg" alt="Página ilustrada de revista de moda de 1898">
-        <figcaption><strong>Las revistas ilustradas</strong>Ayudaban a difundir modelos y detalles de vestuario.</figcaption>
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/De%20Gracieuse%2C%20Ge%C3%AFllustreerde%20Aglaja%2C%20april%201898%2C%20No.%203511%2C%20RP-P-OB-103.077.jpg"
+          alt="Página ilustrada de revista de moda de 1898">
+        <figcaption>
+          <strong>Las revistas ilustradas</strong>
+          Ayudaban a difundir modelos y detalles de vestuario.
+        </figcaption>
       </figure>
     </div>
 
-    <div class="image-note"><strong>Una aclaración importante:</strong> España recibió influencias extranjeras, pero no todas las mujeres vestían igual ni podían acceder a los mismos vestidos y accesorios.</div>
+    <div class="image-note">
+      <strong>Una aclaración importante:</strong> Imagen tomada de las tendencias europeas.
+      España recibió influencias extranjeras, pero no todas las mujeres vestían
+      igual ni podían acceder a los mismos vestidos y accesorios.
+    </div>
 
     <div class="detail-grid">
-      <article class="detail-card"><div class="symbol">I.</div><h3>El corsé</h3><p>Ayudaba a definir la silueta de moda entre muchas mujeres de clases acomodadas, aunque no todas lo usaban de la misma manera.</p></article>
-      <article class="detail-card"><div class="symbol">II.</div><h3>Sombreros y guantes</h3><p>Podían completar el atuendo de calle y comunicar cuidado personal, ocasión y posición social.</p></article>
-      <article class="detail-card"><div class="symbol">III.</div><h3>Faldas largas</h3><p>Seguían siendo habituales en la vestimenta femenina, con diferencias según el uso y la situación económica.</p></article>
+      <article class="detail-card">
+        <div class="symbol">I.</div>
+        <h3>El corsé</h3>
+        <p>
+          Ayudaba a definir la silueta de moda entre muchas mujeres de clases
+          acomodadas, aunque no todas lo usaban de la misma manera.
+        </p>
+      </article>
+
+      <article class="detail-card">
+        <div class="symbol">II.</div>
+        <h3>Sombreros y guantes</h3>
+        <p>
+          Podían completar el atuendo de calle y comunicar cuidado personal,
+          ocasión y posición social.
+        </p>
+      </article>
+
+      <article class="detail-card">
+        <div class="symbol">III.</div>
+        <h3>Faldas largas</h3>
+        <p>
+          Seguían siendo habituales en la vestimenta femenina, con diferencias
+          según el uso y la situación económica.
+        </p>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- 03 · MODA MASCULINA -->
 <section class="men-section" id="hombres">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">03 · El armario masculino</div><h2>Trajes, sombreros<br>y pequeños detalles</h2></div>
-      <p>La moda masculina también tenía sus códigos. El corte del traje, el chaleco, el cuello de la camisa y el sombrero variaban según la ocasión y la posición social.</p>
+      <div>
+        <div class="kicker">03 · El armario masculino</div>
+        <h2>Trajes, sombreros<br>y pequeños detalles</h2>
+      </div>
+      <p>
+        La moda masculina también tenía sus códigos. El corte del traje,
+        el chaleco, el cuello de la camisa y el sombrero variaban según
+        la ocasión y la posición social.
+      </p>
     </div>
 
     <div class="men-intro">
       <div>
         <p class="eyebrow">El traje de tres piezas</p>
         <h3>Chaqueta, chaleco y pantalón.</h3>
-        <p>En los años noventa del siglo XIX se extendieron los trajes de chaqueta, chaleco y pantalón, junto con otras prendas formales. Las camisas de cuello rígido, las corbatas y los bigotes también formaban parte de muchas apariencias masculinas de la época.</p>
-        <p>Para las ocasiones formales se usaban prendas más ceremoniosas; para el día a día, los cortes y tejidos podían ser más sencillos. El oficio, el clima y los recursos económicos influían en la elección.</p>
-        <p class="small">Las imágenes de esta sección son referencias visuales internacionales de la década de 1890, no retratos de españoles.</p>
+        <p>
+          En los años noventa del siglo XIX se extendieron los trajes de
+          chaqueta, chaleco y pantalón, junto con otras prendas formales.
+          Las camisas de cuello rígido, las corbatas y los bigotes también
+          formaban parte de muchas apariencias masculinas de la época.
+        </p>
+        <p>
+          Para las ocasiones formales se usaban prendas más ceremoniosas;
+          para el día a día, los cortes y tejidos podían ser más sencillos.
+          El oficio, el clima y los recursos económicos influían en la elección.
+        </p>
+        <p class="small">
+          Las imágenes de esta sección son referencias visuales internacionales
+          de la década de 1890, no retratos de españoles.
+        </p>
       </div>
+
       <figure class="photo">
-        <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/StateLibQld%202%20167751%20Group%20of%20men%20wearing%20three-piece%20suits%2C%20posing%20for%20a%20portrait%2C%201890-1900.jpg" alt="Fotografía histórica de hombres con trajes de tres piezas">
-        <figcaption><strong>El traje en la década de 1890</strong>Fotografía de un grupo de hombres con trajes de tres piezas, 1890–1900. La imagen procede de Australia.</figcaption>
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/StateLibQld%202%20167751%20Group%20of%20men%20wearing%20three-piece%20suits%2C%20posing%20for%20a%20portrait%2C%201890-1900.jpg"
+          alt="Fotografía histórica de siete hombres con trajes de tres piezas">
+        <figcaption>
+          <strong>El traje en la década de 1890</strong>
+          Fotografía de un grupo de hombres con trajes de tres piezas, 1890–1900. La imagen procede de Australia.
+        </figcaption>
       </figure>
     </div>
 
     <div class="men-grid">
-      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Charles%20Spoohr%2C%20Paris%2C%20Saison%201899-1900%20%2813%29.jpg" alt="Lámina de moda masculina de París"><figcaption><strong>La elegancia parisina</strong>Lámina de moda masculina, temporada 1899–1900.</figcaption></figure>
-      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/American%20fashions%20-%20The%20Jno.%20J.%20Mitchell%20Co.%20Litho.%2C%20New%20York.%20LCCN2006676665.jpg" alt="Lámina estadounidense de moda masculina"><figcaption><strong>Los modelos de catálogo</strong>Ilustración comercial de moda masculina publicada en Estados Unidos.</figcaption></figure>
-      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fall%20and%20Winter%2C%201890-91%20Fashion%20Catalogue%20-%20H.%20O%27Neill%20and%20Co.%20%281890%29%20%2814598645177%29.jpg" alt="Catálogo de moda de otoño e invierno de 1890-1891"><figcaption><strong>Moda en papel</strong>Catálogo de otoño e invierno de 1890–1891.</figcaption></figure>
+      <figure class="photo">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Charles%20Spoohr%2C%20Paris%2C%20Saison%201899-1900%20%2813%29.jpg"
+          alt="Lámina de moda masculina de París, temporada 1899-1900">
+        <figcaption>
+          <strong>La elegancia parisina</strong>
+          Lámina de moda masculina, temporada 1899–1900.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/American%20fashions%20-%20The%20Jno.%20J.%20Mitchell%20Co.%20Litho.%2C%20New%20York.%20LCCN2006676665.jpg"
+          alt="Lámina estadounidense de moda masculina de la década de 1890">
+        <figcaption>
+          <strong>Los modelos de catálogo</strong>
+          Ilustración comercial de moda masculina publicada en Estados Unidos.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fall%20and%20Winter%2C%201890-91%20Fashion%20Catalogue%20-%20H.%20O%27Neill%20and%20Co.%20%281890%29%20%2814598645177%29.jpg"
+          alt="Catálogo de moda de otoño e invierno de 1890-1891">
+        <figcaption>
+          <strong>Moda en papel</strong>
+          Catálogo de otoño e invierno de 1890–1891.
+        </figcaption>
+      </figure>
     </div>
 
-    <div class="men-note"><strong>¿Y en España?</strong> También se seguían tendencias europeas, con una influencia destacada de la moda francesa en los ambientes urbanos y acomodados. Estas láminas extranjeras sirven para comparar tendencias generales: no demuestran que todos los españoles vistieran exactamente así.</div>
+    <div class="men-note">
+      <strong>¿Y en España?</strong>
+      También se seguían tendencias europeas, con una influencia destacada
+      de la moda francesa en los ambientes urbanos y acomodados. Sin embargo,
+      estas láminas extranjeras sirven para comparar tendencias generales:
+      no demuestran que todos los españoles vistieran exactamente así.
+    </div>
 
     <div class="bike-grid">
-      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/White%20tie%2C%20and%20bowler%20hat%20%281896%29.jpg" alt="Ilustración de vestimenta masculina formal de 1896"><figcaption><strong>Sombreros y formalidad</strong>Los complementos ayudaban a diferenciar ocasiones y estilos.</figcaption></figure>
-      <div><div class="eyebrow">Otra forma de vestir</div><h3>La ropa también respondía a nuevas actividades.</h3><p>El deporte y el ciclismo impulsaron prendas más prácticas en ciertos contextos. La moda no era solamente una cuestión de elegancia: también debía adaptarse al movimiento y al uso diario.</p><p class="small">Referencia de vestuario formal de finales del siglo XIX. No es una fotografía de la vida cotidiana española.</p></div>
+      <figure class="photo">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:Redirect/file/White%20tie%2C%20and%20bowler%20hat%20%281896%29.jpg"
+          alt="Ilustración de vestimenta masculina formal y sombrero de 1896">
+        <figcaption>
+          <strong>Sombreros y formalidad</strong>
+          Los complementos ayudaban a diferenciar ocasiones y estilos.
+        </figcaption>
+      </figure>
+
+      <div>
+        <div class="eyebrow">Otra forma de vestir</div>
+        <h3>La ropa también respondía a nuevas actividades.</h3>
+        <p>
+          El deporte y el ciclismo impulsaron prendas más prácticas en ciertos
+          contextos. La moda no era solamente una cuestión de elegancia:
+          también debía adaptarse al movimiento y al uso diario.
+        </p>
+        <p class="small">
+          Referencia de vestuario formal de finales del siglo XIX.
+          No es una fotografía de la vida cotidiana española.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- 04 · CLASES SOCIALES -->
 <section id="sociedad">
   <div class="wrap">
-    <div class="section-head"><div><div class="kicker">04 · Moda y sociedad</div><h2>No todo el mundo<br>vestía igual.</h2></div><p>La ropa podía mostrar diferencias sociales, pero también respondía al trabajo, las necesidades cotidianas y las posibilidades de cada familia.</p></div>
+    <div class="section-head">
+      <div>
+        <div class="kicker">04 · Moda y sociedad</div>
+        <h2>No todo el mundo<br>vestía igual.</h2>
+      </div>
+      <p>
+        La ropa podía mostrar diferencias sociales, pero también respondía
+        al trabajo, las necesidades cotidianas y las posibilidades de cada familia.
+      </p>
+    </div>
+
     <div class="class-grid">
       <article>
-        <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898-04-02%2C%20Blanco%20y%20Negro%2C%20Un%20puesto%20de%20pescado.jpg" alt="Ilustración histórica de actividad comercial"><figcaption><strong>La vida trabajadora</strong>El trabajo diario influía en qué prendas resultaban cómodas y posibles de mantener.</figcaption></figure>
-        <h3>La ropa práctica</h3><p>Quienes trabajaban en el campo, los talleres, las tiendas o las calles necesitaban prendas adaptadas a sus labores. El desgaste, el precio de los tejidos y la posibilidad de reparar la ropa eran factores importantes.</p>
+        <figure class="photo">
+          <img loading="lazy"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1898-04-02%2C%20Blanco%20y%20Negro%2C%20Un%20puesto%20de%20pescado.jpg"
+            alt="Ilustración histórica de actividad comercial">
+          <figcaption>
+            <strong>La vida trabajadora</strong>
+            El trabajo diario influía en qué prendas resultaban cómodas y posibles de mantener.
+          </figcaption>
+        </figure>
+        <h3>La ropa práctica</h3>
+        <p>
+          Quienes trabajaban en el campo, los talleres, las tiendas o las
+          calles necesitaban prendas adaptadas a sus labores. El desgaste,
+          el precio de los tejidos y la posibilidad de reparar la ropa eran
+          factores importantes.
+        </p>
       </article>
+
       <article>
-        <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/L%27Art%20et%20la%20Mode%2C%201898%2C%20No.%2018%2C%20XVIII%20Toilette%20en%20mousselin%2C%20RP-P-2009-3786.jpg" alt="Ilustración de vestimenta elegante de una revista de moda"><figcaption><strong>La moda de revista</strong>Las publicaciones mostraban modelos y estilos que no estaban al alcance de todos.</figcaption></figure>
-        <h3>La ropa como distinción</h3><p>Los tejidos, los adornos, el ajuste de las prendas y los complementos podían comunicar riqueza o respetabilidad. Una ilustración de moda mostraba un ideal, no necesariamente la ropa de toda la población.</p>
+        <figure class="photo">
+          <img loading="lazy"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/L%27Art%20et%20la%20Mode%2C%201898%2C%20No.%2018%2C%20XVIII%20Toilette%20en%20mousselin%2C%20RP-P-2009-3786.jpg"
+            alt="Ilustración de vestimenta elegante de una revista de moda">
+          <figcaption>
+            <strong>La moda de revista</strong>
+            Las publicaciones mostraban modelos y estilos que no estaban al alcance de todos.
+          </figcaption>
+        </figure>
+        <h3>La ropa como distinción</h3>
+        <p>
+          Los tejidos, los adornos, el ajuste de las prendas y los complementos
+          podían comunicar riqueza o respetabilidad. Pero una ilustración
+          de moda mostraba un ideal, no necesariamente la ropa de toda la población.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
+<!-- 05 · GENERACIÓN DEL 98 -->
 <section id="autores">
   <div class="wrap">
-    <div class="section-head"><div><div class="kicker">05 · Letras y pensamiento</div><h2>La Generación del 98</h2></div><p>Más que compartir un uniforme o una sola idea, estos autores se relacionaron por su preocupación por España y por las preguntas que dejó la crisis de fin de siglo.</p></div>
+    <div class="section-head">
+      <div>
+        <div class="kicker">05 · Letras y pensamiento</div>
+        <h2>La Generación del 98</h2>
+      </div>
+      <p>
+        Más que compartir un uniforme o una sola idea, estos autores se
+        relacionaron por su preocupación por España y por las preguntas
+        que dejó la crisis de fin de siglo.
+      </p>
+    </div>
 
     <div class="writers-grid">
       <article class="writer">
         <figure class="photo">
-          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Unamuno%201912.png" alt="Fotografía de Miguel de Unamuno, publicada en 1912">
-          <figcaption>Fotografía de Miguel de Unamuno publicada en 1912.</figcaption>
+          <img loading="lazy"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Unamuno%201912.png"
+            alt="Retrato fotográfico de Miguel de Unamuno">
+          <figcaption>Retrato de Miguel de Unamuno, publicado en 1912.</figcaption>
         </figure>
-        <div class="dates">1864–1936</div><h3>Miguel de Unamuno</h3>
-        <p>Escritor y pensador interesado en la identidad, la fe, las dudas humanas y el futuro de España. En sus ensayos y novelas aparecen conflictos interiores y preguntas difíciles.</p>
+        <div class="dates">1864–1936</div>
+        <h3>Miguel de Unamuno</h3>
+        <p>
+          Escritor y pensador interesado en la identidad, la fe, las dudas
+          humanas y el futuro de España. En sus ensayos y novelas aparecen
+          conflictos interiores y preguntas difíciles.
+        </p>
       </article>
 
       <article class="writer">
         <figure class="photo">
-          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Retrato%20de%20P%C3%ADo%20Baroja.png" alt="Retrato fotográfico de Pío Baroja">
-          <figcaption>Retrato fotográfico de Pío Baroja, hacia 1910.</figcaption>
+          <img loading="lazy"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait%20of%20P%C3%ADo%20Baroja%20%28cropped%29.jpg"
+            alt="Retrato fotográfico del escritor Pío Baroja">
+          <figcaption>Retrato de Pío Baroja.</figcaption>
         </figure>
-        <div class="dates">1872–1956</div><h3>Pío Baroja</h3>
-        <p>Novelista conocido por su estilo directo y por personajes que recorren una sociedad llena de dificultades, contradicciones e inquietudes.</p>
+        <div class="dates">1872–1956</div>
+        <h3>Pío Baroja</h3>
+        <p>
+          Novelista conocido por su estilo directo y por personajes que
+          recorren una sociedad llena de dificultades, contradicciones
+          e inquietudes.
+        </p>
       </article>
 
       <article class="writer">
         <figure class="photo">
-          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Azor%C3%ADn.png" alt="Retrato del escritor español Azorín, publicado en 1912">
-          <figcaption>Retrato de Azorín publicado en 1912.</figcaption>
+          <img loading="lazy"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Azor%C3%ADn.png"
+            alt="Retrato fotográfico del escritor Azorín">
+          <figcaption>Retrato de Azorín, publicado en 1912.</figcaption>
         </figure>
-        <div class="dates">1873–1967</div><h3>Azorín</h3>
-        <p>Escritor y periodista que observó el paisaje, los pueblos, la historia y la vida cotidiana con una prosa precisa y reflexiva. Su obra contribuyó a la imagen literaria de la Generación del 98.</p>
+        <div class="dates">1873–1967</div>
+        <h3>Azorín</h3>
+        <p>
+          Escritor y periodista que observó el paisaje, los pueblos, la
+          historia y la vida cotidiana con una prosa precisa y reflexiva.
+          Su obra contribuyó a la imagen literaria de la Generación del 98.
+        </p>
       </article>
     </div>
 
-    <div class="image-note">Estos retratos identifican a los escritores; fueron publicados después de 1898 y no deben tomarse como fotografías realizadas exactamente en ese año.</div>
+    <div class="image-note">
+      Los retratos de los escritores pueden ser posteriores a 1898.
+      Se incluyen para identificar a los autores, no como prueba de que
+      fueron fotografiados exactamente en ese año.
+    </div>
   </div>
 </section>
 
+<!-- 06 · FLOR INTERACTIVA -->
 <section class="flower-section" id="flor">
   <div class="wrap">
     <div class="kicker">06 · Un pequeño archivo secreto</div>
+
     <div class="flower-grid" style="margin-top:25px">
       <div>
         <h2>Deshoja la historia.</h2>
-        <p>Cada pétalo esconde un dato sobre la época. Toca los pétalos para descubrirlos uno por uno.</p>
-        <p class="small" style="color:#bba99a">No hay números sobre la flor: solo pétalos que puedes retirar.</p>
-        <div class="flower-controls"><button onclick="resetFlower()">Volver a poner los pétalos ↺</button></div>
+        <p>
+          Cada pétalo esconde un dato sobre la época. Toca los pétalos
+          para descubrirlos uno por uno.
+        </p>
+        <p class="small" style="color:#bba99a">
+          No hay números sobre la flor: solo pétalos que puedes retirar.
+        </p>
+        <div class="flower-controls">
+          <button type="button" onclick="resetFlower()">Volver a poner los pétalos ↺</button>
+        </div>
       </div>
 
       <div>
         <div class="flower">
-          <svg id="flowerSvg" viewBox="0 0 400 400" role="img" aria-label="Flor interactiva con ocho pétalos">
-            <defs><linearGradient id="petalColor" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c98580"/><stop offset="100%" stop-color="#803744"/></linearGradient></defs>
+          <svg id="flowerSvg" viewBox="0 0 400 400" role="img"
+            aria-label="Flor interactiva con ocho pétalos que se pueden retirar">
+            <defs>
+              <linearGradient id="petalColor" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#c98580"/>
+                <stop offset="100%" stop-color="#803744"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Todos los pétalos giran alrededor del mismo centro.
+                 La animación solo cambia su opacidad para no desordenarlos. -->
             <g id="petals">
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(45 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(90 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(135 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(180 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(225 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(270 200 200)"/>
-              <ellipse class="petal" tabindex="0" role="button" aria-label="Retirar pétalo" cx="200" cy="135" rx="39" ry="77" fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5" transform="rotate(315 200 200)"/>
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 1" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 2" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(45 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 3" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(90 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 4" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(135 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 5" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(180 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 6" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(225 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 7" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(270 200 200)"/>
+
+              <ellipse class="petal" tabindex="0" role="button"
+                aria-label="Retirar pétalo 8" cx="200" cy="135" rx="39" ry="77"
+                fill="url(#petalColor)" stroke="#e0b3a6" stroke-width="1.5"
+                transform="rotate(315 200 200)"/>
             </g>
+
             <circle class="flower-center" cx="200" cy="200" r="43"/>
             <circle cx="200" cy="200" r="29" fill="#b98a65"/>
             <path d="M185 205 Q200 185 215 205 Q200 220 185 205Z" fill="#f2d8b9"/>
             <path d="M200 187 Q188 200 200 212 Q212 200 200 187Z" fill="#f2d8b9"/>
           </svg>
         </div>
+
         <p class="flower-instruction">Toca un pétalo para descubrir un dato.</p>
+
         <div class="fact-box" aria-live="polite">
           <div class="fact-count" id="factCount">Tu archivo histórico</div>
           <h3 id="factTitle">¿Qué habrá detrás?</h3>
@@ -441,46 +844,102 @@ section{padding:86px 0}
   </div>
 </section>
 
+<!-- FUENTES -->
 <footer class="sources">
   <div class="wrap">
     <div class="eyebrow">Para seguir investigando</div>
     <h2 class="serif">Fuentes y referencias</h2>
-    <p>Las láminas de moda son referencias visuales de tendencias europeas y estadounidenses de finales del siglo XIX. No deben confundirse con fotografías de la población española.</p>
+    <p>
+      Las láminas de moda son referencias visuales de tendencias europeas
+      y estadounidenses de finales del siglo XIX. No deben confundirse con
+      fotografías de la población española.
+    </p>
     <ul>
-      <li><a href="https://fashionhistory.fitnyc.edu/1890-1899/" target="_blank" rel="noopener">Fashion History Timeline — Fashion in the 1890s</a>. Información sobre vestimenta y siluetas de la década.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Wikimedia Commons — Láminas de moda de 1898</a>.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/Category:Male_fashion_in_the_1890s" target="_blank" rel="noopener">Wikimedia Commons — Moda masculina de la década de 1890</a>.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/Category:1890s_fashion_plates_depicting_men" target="_blank" rel="noopener">Wikimedia Commons — Láminas de moda masculina</a>.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Unamuno_1912.png" target="_blank" rel="noopener">Wikimedia Commons — Retrato de Miguel de Unamuno</a>.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Retrato_de_P%C3%ADo_Baroja.png" target="_blank" rel="noopener">Wikimedia Commons — Retrato de Pío Baroja</a>.</li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Azor%C3%ADn.png" target="_blank" rel="noopener">Wikimedia Commons — Retrato de Azorín</a>.</li>
-      <li><a href="https://www.cervantes.es/" target="_blank" rel="noopener">Instituto Cervantes</a>. Recurso institucional para ampliar información sobre literatura española.</li>
+      <li>
+        <a href="https://fashionhistory.fitnyc.edu/1890-1899/" target="_blank" rel="noopener">
+          Fashion History Timeline — Fashion in the 1890s
+        </a>. Información sobre vestimenta y siluetas de la década.
+      </li>
+      <li>
+        <a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">
+          Wikimedia Commons — Láminas de moda de 1898
+        </a>.
+      </li>
+      <li>
+        <a href="https://commons.wikimedia.org/wiki/Category:Male_fashion_in_the_1890s" target="_blank" rel="noopener">
+          Wikimedia Commons — Moda masculina de la década de 1890
+        </a>.
+      </li>
+      <li>
+        <a href="https://commons.wikimedia.org/wiki/Category:1890s_fashion_plates_depicting_men" target="_blank" rel="noopener">
+          Wikimedia Commons — Láminas de moda masculina
+        </a>.
+      </li>
+      <li>
+        <a href="https://www.cervantes.es/" target="_blank" rel="noopener">
+          Instituto Cervantes
+        </a>. Recurso institucional para ampliar información sobre literatura española.
+      </li>
     </ul>
-    <p>Antes de publicar o entregar el trabajo, revisa la ficha de cada imagen para consultar su autoría, fecha y licencia. Las imágenes enlazadas pueden tener condiciones de reutilización distintas.</p>
+    <p>
+      Antes de publicar o entregar el trabajo, revisa la ficha de cada imagen
+      para consultar su autoría, fecha y licencia. Las imágenes enlazadas
+      pueden tener condiciones de reutilización distintas.
+    </p>
     <div class="rule" style="background:#594a42"></div>
-    <div class="footer" style="color:#c5b5a8"><span>Recorrido por la elegancia del 98</span><a href="#inicio">Volver a la portada ↑</a></div>
+    <div class="footer" style="color:#c5b5a8">
+      <span>Recorrido por la elegancia del 98</span>
+      <a href="#inicio">Volver a la portada ↑</a>
+    </div>
   </div>
 </footer>
 
 </main>
 
 <script>
+/* Texto desplegable de la sección femenina */
 function toggleText(id,button){
   const element=document.getElementById(id);
   element.classList.toggle('open');
-  button.textContent=element.classList.contains('open')?'Mostrar menos −':'Descubrir más +';
+  button.textContent=element.classList.contains('open')
+    ?'Mostrar menos −'
+    :'Descubrir más +';
 }
 
-/* Flor interactiva */
+/* Flor interactiva: cada pétalo revela un dato */
 const facts=[
-  {title:'Una crisis que marcó una época',text:'En 1898, la derrota frente a Estados Unidos y la pérdida de Cuba, Puerto Rico y Filipinas provocaron una profunda crisis política y cultural.'},
-  {title:'París como referencia',text:'La moda francesa influyó en las tendencias que circulaban por Europa. Su llegada a España dependía del acceso a tiendas, revistas y recursos.'},
-  {title:'El traje de tres piezas',text:'Chaqueta, chaleco y pantalón formaban una combinación común en la moda masculina de la década de 1890.'},
-  {title:'La ropa también era práctica',text:'El trabajo y las nuevas actividades deportivas favorecieron prendas pensadas para moverse y realizar tareas cotidianas.'},
-  {title:'Las revistas difundían tendencias',text:'Las láminas ilustradas permitían conocer modelos de ropa y complementos incluso antes de que muchas personas pudieran comprarlos.'},
-  {title:'La moda no era igual para todos',text:'El precio de los tejidos, el oficio, el clima y la posición social influían en la ropa que podía llevar cada persona.'},
-  {title:'Una generación literaria',text:'Unamuno, Pío Baroja y Azorín se encuentran entre los escritores vinculados a la Generación del 98, preocupada por la realidad española.'},
-  {title:'Un ideal de elegancia',text:'Las ilustraciones de moda mostraban modelos deseables, pero no representan por sí solas la forma de vestir de toda la población.'}
+  {
+    title:'Una crisis que marcó una época',
+    text:'En 1898, la derrota frente a Estados Unidos y la pérdida de Cuba, Puerto Rico y Filipinas provocaron una profunda crisis política y cultural.'
+  },
+  {
+    title:'París como referencia',
+    text:'La moda francesa influyó en las tendencias que circulaban por Europa. Su llegada a España dependía del acceso a tiendas, revistas y recursos.'
+  },
+  {
+    title:'El traje de tres piezas',
+    text:'Chaqueta, chaleco y pantalón formaban una combinación común en la moda masculina de la década de 1890.'
+  },
+  {
+    title:'La ropa también era práctica',
+    text:'El trabajo y las nuevas actividades deportivas favorecieron prendas pensadas para moverse y realizar tareas cotidianas.'
+  },
+  {
+    title:'Las revistas difundían tendencias',
+    text:'Las láminas ilustradas permitían conocer modelos de ropa y complementos incluso antes de que muchas personas pudieran comprarlos.'
+  },
+  {
+    title:'La moda no era igual para todos',
+    text:'El precio de los tejidos, el oficio, el clima y la posición social influían en la ropa que podía llevar cada persona.'
+  },
+  {
+    title:'Una generación literaria',
+    text:'Unamuno, Pío Baroja y Azorín se encuentran entre los escritores vinculados a la Generación del 98, preocupada por la realidad española.'
+  },
+  {
+    title:'Un ideal de elegancia',
+    text:'Las ilustraciones de moda mostraban modelos deseables, pero no representan por sí solas la forma de vestir de toda la población.'
+  }
 ];
 
 let factIndex=0;
@@ -488,22 +947,28 @@ const petals=Array.from(document.querySelectorAll('.petal'));
 
 function removePetal(petal){
   if(petal.classList.contains('gone'))return;
+
   petal.classList.add('gone');
+
   const fact=facts[factIndex%facts.length];
-  document.getElementById('factCount').textContent='Dato descubierto · '+(factIndex+1)+' de '+facts.length;
+  document.getElementById('factCount').textContent=
+    'Dato descubierto · '+(factIndex+1)+' de '+facts.length;
   document.getElementById('factTitle').textContent=fact.title;
   document.getElementById('factText').textContent=fact.text;
+
   factIndex++;
 
   if(petals.every(p=>p.classList.contains('gone'))){
     document.getElementById('factCount').textContent='Flor deshojada';
     document.getElementById('factTitle').textContent='¡Ya descubriste todo!';
-    document.getElementById('factText').textContent='Has encontrado los ocho datos. Puedes volver a poner los pétalos y recorrerlos otra vez.';
+    document.getElementById('factText').textContent=
+      'Has encontrado los ocho datos. Puedes volver a poner los pétalos y recorrerlos otra vez.';
   }
 }
 
 petals.forEach(petal=>{
   petal.addEventListener('click',()=>removePetal(petal));
+
   petal.addEventListener('keydown',event=>{
     if(event.key==='Enter'||event.key===' '){
       event.preventDefault();
@@ -515,9 +980,11 @@ petals.forEach(petal=>{
 function resetFlower(){
   petals.forEach(p=>p.classList.remove('gone'));
   factIndex=0;
+
   document.getElementById('factCount').textContent='Tu archivo histórico';
   document.getElementById('factTitle').textContent='¿Qué habrá detrás?';
-  document.getElementById('factText').textContent='Retira cualquier pétalo y descubre una curiosidad de la época.';
+  document.getElementById('factText').textContent=
+    'Retira cualquier pétalo y descubre una curiosidad de la época.';
 }
 </script>
 
