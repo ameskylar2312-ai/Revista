@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recorrido por la elegancia del 98</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --cream: #f5efe3;
+  --paper: #fffaf1;
+  --ink: #30251f;
+  --wine: #762f3d;
+  --rose: #b77a7d;
+  --gold: #b99a61;
+  --muted: #796c60;
+  --line: #dfd1bc;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+button { font: inherit; cursor: pointer; }
+
+button:focus-visible, a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+img { max-width: 100%; }
+
+.topbar {
+  background: var(--wine);
+  color: #fff8ed;
+  text-align: center;
+  padding: 9px 12px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 15px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--wine);
+  line-height: 1.1;
+}
+
+.brand small {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.menu-btn {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 11px;
+  color: var(--wine);
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+nav {
+  display: none;
+  background: var(--paper);
+  padding: 10px 18px 18px;
+  border-bottom: 1px solid var(--line);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+nav.open { display: flex; }
+
+nav button {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 7px 10px;
+  font-size: 11px;
+  color: var(--ink);
+}
+
+nav button:hover { background: #efe3d3; }
+
+main {
+  width: min(100% - 30px, 850px);
+  margin: 0 auto;
+}
+
+.page {
+  display: none;
+  padding: 32px 0 45px;
+  animation: appear .45s ease;
+}
+
+.page.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.kicker {
+  color: var(--wine);
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+h1 {
+  font-size: clamp(44px, 10vw, 82px);
+  line-height: .95;
+  margin: 20px 0;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: clamp(34px, 7vw, 52px);
+  line-height: 1.05;
+  margin: 12px 0 18px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+p { margin: 10px 0 16px; }
+
+.lead {
+  font-size: 17px;
+  color: #66574c;
+  max-width: 610px;
+}
+
+.small { font-size: 12px; color: var(--muted); }
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  margin: 23px 0;
+}
+
+.cover {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 6vw, 55px);
+  position: relative;
+  overflow: hidden;
+  min-height: 510px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover:before, .cover:after {
+  content: "✦";
+  position: absolute;
+  color: var(--gold);
+  font-size: 95px;
+  opacity: .3;
+  pointer-events: none;
+}
+
+.cover:before { top: -18px; right: 14px; }
+.cover:after { bottom: -34px; left: 14px; }
+
+.cover-art {
+  margin: 20px auto 10px;
+  width: min(100%, 360px);
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: var(--wine);
+}
+
+.cover-art span {
+  font-size: clamp(44px, 10vw, 75px);
+  filter: sepia(.4);
+}
+
+.cover-note {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  margin-top: 16px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.btn {
+  background: var(--wine);
+  color: #fffaf1;
+  border: 1px solid var(--wine);
+  padding: 12px 18px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.btn:hover { background: #51202b; }
+
+.btn.secondary {
+  background: transparent;
+  color: var(--wine);
+}
+
+.btn.secondary:hover { background: #efe3d3; }
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.note {
+  border-left: 3px solid var(--gold);
+  background: #eee4d4;
+  padding: 15px 17px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin: 22px 0;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 17px;
+  min-width: 0;
+}
+
+.card .symbol {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card p { font-size: 13px; }
+
+.card-btn {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 17px;
+  border-radius: 0;
+}
+
+.card-btn:hover { background: #f0e5d5; }
+
+.reveal {
+  display: none;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.reveal.show { display: block; }
+
+.timeline {
+  border-left: 2px solid var(--gold);
+  margin: 25px 0 25px 8px;
+  padding-left: 22px;
+}
+
+.time-item {
+  position: relative;
+  margin: 0 0 22px;
+}
+
+.time-item:before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--wine);
+  border: 2px solid var(--cream);
+}
+
+.time-item strong {
+  color: var(--wine);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.outfit {
+  font-size: 60px;
+  text-align: center;
+  padding: 15px;
+  background: #eee4d4;
+  margin-bottom: 12px;
+}
+
+.outfit-detail { min-height: 95px; }
+
+.pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.pill {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 11px;
+  border-radius: 30px;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.pill.selected {
+  background: var(--wine);
+  border-color: var(--wine);
+  color: white;
+}
+
+.writers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.writer {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 12px;
+  text-align: center;
+}
+
+.writer img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  filter: sepia(.55) grayscale(.35);
+  background: #e8dccb;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.writer .fallback {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background: #e8dccb;
+  color: var(--wine);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 47px;
+  margin-bottom: 10px;
+}
+
+.writer h3 { font-size: 22px; }
+
+.writer p { font-size: 12px; }
+
+.writer button {
+  background: transparent;
+  color: var(--wine);
+  border: 1px solid var(--line);
+  padding: 7px;
+  font-size: 11px;
+  width: 100%;
+}
+
+.writer-extra {
+  display: none;
+  font-size: 12px;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.writer-extra.show { display: block; }
+
+.photo-note {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.quiz {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.quiz-option {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 9px 0;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+.quiz-option:hover { background: #eee4d4; }
+
+.feedback {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.flower-stage {
+  background: #eee4d4;
+  border: 1px solid var(--line);
+  padding: 25px 12px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.flower {
+  width: min(100%, 310px);
+  height: 310px;
+  position: relative;
+  margin: 10px auto 20px;
+}
+
+.petal {
+  position: absolute;
+  width: 74px;
+  height: 113px;
+  left: calc(50% - 37px);
+  top: calc(50% - 105px);
+  transform-origin: 50% 105px;
+  border: 1px solid #b77a7d;
+  border-radius: 55% 55% 45% 45%;
+  background: #c88d91;
+  color: #fffaf1;
+  font-size: 12px;
+  font-weight: 700;
+  transition: opacity .45s, transform .5s, background .3s;
+  box-shadow: 0 2px 5px #6c3b3b22;
+}
+
+.petal:nth-child(even) { background: #a85f6c; }
+
+.petal:nth-child(1) { transform: rotate(0deg); }
+.petal:nth-child(2) { transform: rotate(45deg); }
+.petal:nth-child(3) { transform: rotate(90deg); }
+.petal:nth-child(4) { transform: rotate(135deg); }
+.petal:nth-child(5) { transform: rotate(180deg); }
+.petal:nth-child(6) { transform: rotate(225deg); }
+.petal:nth-child(7) { transform: rotate(270deg); }
+.petal:nth-child(8) { transform: rotate(315deg); }
+
+.petal.removed {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(var(--dx), var(--dy)) rotate(40deg) scale(.2);
+}
+
+.flower-center {
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 35px);
+  top: calc(50% - 35px);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #d8b86c;
+  border: 3px double #f5e5ad;
+  display: grid;
+  place-items: center;
+  color: #6b4728;
+  font-size: 22px;
+}
+
+.fact-box {
+  max-width: 500px;
+  min-height: 70px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 15px;
+  font-size: 14px;
+}
+
+.progress {
+  height: 5px;
+  background: #dfd1bc;
+  max-width: 310px;
+  margin: 12px auto;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--wine);
+  transition: width .3s;
+}
+
+#finalQuiz { display: none; }
+
+.sources a {
+  color: var(--wine);
+  overflow-wrap: anywhere;
+}
+
+.sources li { margin-bottom: 12px; font-size: 13px; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 20px 15px 35px;
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.page-number {
+  margin-top: 28px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .writers { grid-template-columns: 1fr; }
+  .writer {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 0 13px;
+    text-align: left;
+  }
+  .writer img, .writer .fallback {
+    grid-row: span 4;
+    height: 145px;
+    margin: 0;
+  }
+  .writer h3 { align-self: end; }
+  .writer button { align-self: start; }
+  .writer-extra { grid-column: 1 / -1; }
+  .cover { min-height: 480px; }
+  .flower { transform: scale(.91); transform-origin: top center; margin-bottom: -8px; }
+  .page { padding-top: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">Edición especial · España, 1898</div>
+
+<header>
+  <div class="brand">
+    Recorrido por la elegancia del 98
+    <small>MODA · HISTORIA · LITERATURA</small>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" id="menuButton">ÍNDICE ☰</button>
+</header>
+
+<nav id="menu" aria-label="Índice de la revista">
+  <button onclick="goTo(0)">Portada</button>
+  <button onclick="goTo(1)">El contexto</button>
+  <button onclick="goTo(2)">Moda femenina</button>
+  <button onclick="goTo(3)">Moda masculina</button>
+  <button onclick="goTo(4)">Los escritores</button>
+  <button onclick="goTo(5)">La sociedad</button>
+  <button onclick="goTo(6)">Lo que cuenta un retrato</button>
+  <button onclick="goTo(7)">La flor sorpresa</button>
+</nav>
+
+<main>
+
+<!-- PÁGINA 1: PORTADA -->
+<section class="page active" id="page0">
+  <div class="cover">
+    <div class="kicker">Una mirada al cambio de siglo</div>
+    <h1>Recorrido por la elegancia del <span style="color:var(--wine)">98</span></h1>
+    <p class="lead">La moda, las costumbres y los escritores de una España en transformación.</p>
+
+    <div class="cover-art" aria-label="Ilustración decorativa de época">
+      <span>♧</span><span>✦</span><span>❦</span>
+    </div>
+
+    <div class="cover-note">VESTIR UNA ÉPOCA · CONTAR UNA HISTORIA</div>
+    <p>¿Qué nos puede contar la ropa sobre quienes vivieron hace más de cien años?</p>
+    <div class="button-row">
+      <button class="btn" onclick="goTo(1)">Comenzar el recorrido →</button>
+    </div>
+  </div>
+  <div class="page-number"><span>REVISTA HISTÓRICA</span><span>01 / 08</span></div>
+</section>
+
+<!-- PÁGINA 2: CONTEXTO -->
+<section class="page" id="page1">
+  <div class="kicker">01 · El contexto</div>
+  <h2>1898: un año que dejó huella</h2>
+  <p class="lead">España estaba atravesando una crisis política y social. Mientras el país discutía su futuro, varios escritores empezaron a reflexionar sobre su identidad.</p>
+
+  <div class="note">
+    <strong>¿Qué ocurrió?</strong><br>
+    Tras la guerra con Estados Unidos y el Tratado de París de 1898, España perdió el control de Cuba, Puerto Rico y Filipinas, además de Guam. Este episodio pasó a conocerse como el <em>Desastre del 98</em>.
+  </div>
+
+  <h3>Una época en tres momentos</h3>
+  <div class="timeline">
+    <div class="time-item">
+      <strong>FINALES DEL SIGLO XIX</strong>
+      <p>La sociedad española mantenía muchas costumbres tradicionales, aunque las ciudades, la prensa y las nuevas formas de consumo empezaban a transformar la vida cotidiana.</p>
+    </div>
+    <div class="time-item">
+      <strong>1898 · EL DESASTRE</strong>
+      <p>La derrota frente a Estados Unidos provocó una crisis nacional. Intelectuales y escritores debatieron sobre los problemas y el futuro de España.</p>
+    </div>
+    <div class="time-item">
+      <strong>CAMBIO DE SIGLO</strong>
+      <p>La moda europea vivía la Belle Époque: convivían prendas tradicionales, nuevas tendencias y propuestas que buscaban mayor comodidad.</p>
+    </div>
+  </div>
+
+  <h3>¿Y qué tiene que ver con la literatura?</h3>
+  <p>La Generación del 98 es el nombre con el que se conoce a un grupo de escritores preocupados por España, su historia, sus problemas y su identidad. No todos pensaban igual, pero compartían inquietudes sobre la realidad de su tiempo.</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="symbol">✒</span>
+      <h3>Las palabras</h3>
+      <p>Novelas, ensayos y artículos sirvieron para cuestionar la sociedad y reflexionar sobre el país.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">⌂</span>
+      <h3>La vida cotidiana</h3>
+      <p>La ropa, los paseos y las reuniones sociales también reflejaban las costumbres y diferencias de la época.</p>
+    </div>
+  </div>
+  <div class="button-row"><button class="btn" onclick="goTo(2)">Ver la moda femenina →</button></div>
+  <div class="page-number"><span>EL CONTEXTO</span><span>02 / 08</span></div>
+</section>
+
+<!-- PÁGINA 3: MODA FEMENINA -->
+<section class="page" id="page2">
+  <div class="kicker">02 · La moda femenina</div>
+  <h2>Entre corsés, faldas y sombreros</h2>
+  <p class="lead">A finales del siglo XIX, la ropa femenina podía tener formas muy elaboradas. La silueta, los accesorios y la ocasión importaban mucho.</p>
+
+  <div class="outfit" aria-hidden="true">👒</div>
+  <p class="small" style="text-align:center">Pequeña guía de detalles de la vestimenta</p>
+
+  <div class="grid">
+    <button class="card-btn" onclick="reveal('corset')">
+      <span class="symbol">♧</span>
+      <h3>El corsé</h3>
+      <p>Descubre qué función tenía.</p>
+      <div class="reveal" id="corset">Era una prenda estructurada que se llevaba bajo la ropa y ayudaba a moldear el torso y definir la cintura. También podía limitar el movimiento y causar incomodidad.</div>
+    </button>
+
+    <button class="card-btn" onclick="reveal('hat')">
+      <span class="symbol">♙</span>
+      <h3>Los sombreros</h3>
+      <p>No eran solo decoración.</p>
+      <div class="reveal" id="hat">Los sombreros eran accesorios importantes para muchas salidas y ocasiones sociales. Sus formas y adornos variaban según la moda, los recursos y el contexto.</div>
+    </button>
+
+    <button class="card-btn" onclick="reveal('skirt')">
+      <span class="symbol">♧</span>
+      <h3>Las faldas</h3>
+      <p>La silueta también cambiaba.</p>
+      <div class="reveal" id="skirt">Las faldas largas eran habituales. Hacia el cambio de siglo se fueron modificando los volúmenes y convivieron distintos estilos, desde los más ornamentados hasta los más sencillos.</div>
+    </button>
+
+    <button class="card-btn" onclick="reveal('suit')">
+      <span class="symbol">✧</span>
+      <h3>El traje sastre</h3>
+      <p>Elegancia para salir a pasear.</p>
+      <div class="reveal" id="suit">La combinación de chaqueta y falda ofrecía una alternativa práctica para pasear y realizar ciertas actividades. Sus versiones variaban en corte, tejido y decoración.</div>
+    </button>
+  </div>
+
+  <div class="note">
+    <strong>Un detalle importante:</strong> no todas las mujeres vestían de la misma forma. La moda dependía del lugar, la ocupación, la ocasión y la capacidad económica de cada familia.
+  </div>
+
+  <h3>¿La moda se quedaba igual?</h3>
+  <p>No. Las revistas difundían tendencias y los comercios ofrecían prendas confeccionadas para más compradores. Sin embargo, los cambios no llegaban a todos por igual y muchas personas seguían usando ropa tradicional.</p>
+
+  <div class="button-row"><button class="btn" onclick="goTo(3)">Descubrir la moda masculina →</button></div>
+  <div class="page-number"><span>LA MODA FEMENINA</span><span>03 / 08</span></div>
+</section>
+
+<!-- PÁGINA 4: MODA MASCULINA -->
+<section class="page" id="page3">
+  <div class="kicker">03 · La moda masculina</div>
+  <h2>La elegancia también tenía reglas</h2>
+  <p class="lead">En la vestimenta masculina urbana, la sobriedad era frecuente. El corte de las prendas y los accesorios podían cambiar según el lugar y la ocasión.</p>
+
+  <div class="outfit" id="manIcon" aria-hidden="true">🎩</div>
+
+  <div class="pill-row">
+    <button class="pill selected" onclick="showOutfit('paseo', this)">Para un paseo</button>
+    <button class="pill" onclick="showOutfit('formal', this)">Para una ocasión formal</button>
+  </div>
+
+  <div class="card outfit-detail" id="outfitDetail">
+    <h3>Un paseo por la ciudad</h3>
+    <p>Podía elegirse una chaqueta, pantalón, camisa y sombrero. Los tejidos y el nivel de formalidad dependían de las costumbres locales y los recursos de cada persona.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <span class="symbol">♜</span>
+      <h3>Chaqueta y chaleco</h3>
+      <p>Las prendas superpuestas formaban parte de muchos conjuntos masculinos. El chaleco podía aportar un acabado más formal.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">♧</span>
+      <h3>Cuellos y accesorios</h3>
+      <p>Camisas con cuello, corbatas y sombreros podían completar el conjunto. No todos los hombres usaban exactamente lo mismo.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>La ropa hablaba de la ocasión.</strong><br>
+    No se vestía necesariamente igual para trabajar, caminar por la ciudad, acudir a una reunión o asistir a un acontecimiento formal.
+  </div>
+
+  <div class="button-row"><button class="btn" onclick="goTo(4)">Conocer a los escritores →</button></div>
+  <div class="page-number"><span>LA MODA MASCULINA</span><span>04 / 08</span></div>
+</section>
+
+<!-- PÁGINA 5: ESCRITORES -->
+<section class="page" id="page4">
+  <div class="kicker">04 · Los rostros del 98</div>
+  <h2>Los escritores detrás de las ideas</h2>
+  <p class="lead">No existía un uniforme de la Generación del 98. Sus integrantes tenían estilos y vidas diferentes. Sus retratos nos permiten observar su apariencia, mientras que sus obras nos ayudan a comprender sus ideas.</p>
+
+  <div class="writers">
+    <article class="writer">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Miguel%20de%20Unamuno%201925.jpg" alt="Retrato de Miguel de Unamuno" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="fallback" style="display:none">MU</div>
+      <h3>Miguel de Unamuno</h3>
+      <p>Ensayista, novelista y pensador.</p>
+      <button onclick="reveal('unamuno')">Leer más +</button>
+      <div class="writer-extra" id="unamuno">
+        Reflexionó sobre España, la fe, la duda y el sentido de la existencia. Entre sus obras están <em>Niebla</em> y <em>Del sentimiento trágico de la vida</em>. En sus retratos podemos estudiar su vestimenta, pero no deducir toda su personalidad a partir de ella.
+      </div>
+    </article>
+
+    <article class="writer">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pio%20Baroja%20(1917).jpg" alt="Retrato de Pío Baroja" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="fallback" style="display:none">PB</div>
+      <h3>Pío Baroja</h3>
+      <p>Novelista de estilo directo.</p>
+      <button onclick="reveal('baroja')">Leer más +</button>
+      <div class="writer-extra" id="baroja">
+        En sus novelas exploró conflictos sociales, personajes inconformes y dificultades de la vida cotidiana. Una de sus obras más conocidas es <em>El árbol de la ciencia</em>. Su ropa en fotografías es una pista visual de su época, no una explicación de sus ideas.
+      </div>
+    </article>
+
+    <article class="writer">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Azor%C3%ADn%20por%20Kaulak.jpg" alt="Retrato de Azorín" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="fallback" style="display:none">AZ</div>
+      <h3>Azorín</h3>
+      <p>Escritor y periodista.</p>
+      <button onclick="reveal('azorin')">Leer más +</button>
+      <div class="writer-extra" id="azorin">
+        Su escritura se caracteriza por la atención al paisaje, al paso del tiempo y a los detalles de la vida española. Su nombre real era José Martínez Ruiz. Sus textos permiten conocer aspectos de la época que una fotografía por sí sola no puede explicar.
+      </div>
+    </article>
+  </div>
+
+  <p class="photo-note">Nota: los retratos se cargan desde Wikimedia Commons si están disponibles. Si una imagen no carga, aparecerán las iniciales del escritor en su lugar.</p>
+
+  <div class="note">
+    <strong>¿Qué podemos observar en sus fotografías?</strong><br>
+    Prendas, cuellos, chaquetas, accesorios, peinados y formas de posar. Para conocer sus opiniones, su trayectoria y sus ideas, necesitamos acudir también a sus textos y a fuentes históricas.
+  </div>
+
+  <div class="button-row"><button class="btn" onclick="goTo(5)">La ropa y las diferencias sociales →</button></div>
+  <div class="page-number"><span>LOS ESCRITORES</span><span>05 / 08</span></div>
+</section>
+
+<!-- PÁGINA 6: CLASE SOCIAL -->
+<section class="page" id="page5">
+  <div class="kicker">05 · Moda y sociedad</div>
+  <h2>¿Todos podían vestir igual?</h2>
+  <p class="lead">La respuesta es no. La moda podía inspirar a muchas personas, pero seguir sus tendencias dependía de las posibilidades de cada una.</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="symbol">✧</span>
+      <h3>Quienes podían gastar más</h3>
+      <p>Algunos sectores acomodados podían encargar ropa a medida, adquirir tejidos costosos o cambiar de prendas con mayor frecuencia.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">♧</span>
+      <h3>Quienes tenían menos recursos</h3>
+      <p>Para muchas familias, reparar, reutilizar y conservar la ropa era necesario. La durabilidad podía ser más importante que seguir la última tendencia.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">▤</span>
+      <h3>Revistas y comercios</h3>
+      <p>Las revistas mostraban modelos nuevos. Las tiendas y los grandes almacenes facilitaron el acceso a ciertas prendas confeccionadas, aunque las diferencias económicas continuaron.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">⌂</span>
+      <h3>La ocasión importaba</h3>
+      <p>La ropa de trabajo, de paseo y de las celebraciones podía ser distinta. Las costumbres también influían en lo que se consideraba apropiado.</p>
+    </div>
+  </div>
+
+  <h3>Una idea para recordar</h3>
+  <p>La vestimenta no era solamente una cuestión de gusto. También reflejaba las posibilidades económicas, las normas sociales y las actividades cotidianas de cada persona.</p>
+
+  <div class="note">
+    La moda de finales del siglo XIX no fue idéntica en toda España. Había diferencias entre ciudades y zonas rurales, así como entre grupos sociales y ocupaciones.
+  </div>
+
+  <div class="button-row"><button class="btn" onclick="goTo(6)">Aprender a leer un retrato →</button></div>
+  <div class="page-number"><span>MODA Y SOCIEDAD</span><span>06 / 08</span></div>
+</section>
+
+<!-- PÁGINA 7: INTERPRETAR -->
+<section class="page" id="page6">
+  <div class="kicker">06 · Mira con atención</div>
+  <h2>Mucho más que ropa</h2>
+  <p class="lead">Una fotografía antigua puede revelar detalles interesantes, pero también tiene límites. Aprender historia significa observar y preguntar antes de sacar conclusiones.</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="symbol">◎</span>
+      <h3>Lo que sí vemos</h3>
+      <p>Podemos describir prendas, materiales visibles, accesorios, postura y elementos del entorno que aparecen en la imagen.</p>
+    </div>
+    <div class="card">
+      <span class="symbol">?</span>
+      <h3>Lo que necesitamos investigar</h3>
+      <p>No podemos conocer con seguridad las creencias, los sentimientos o la personalidad de alguien solamente por su ropa o su expresión.</p>
+    </div>
+  </div>
+
+  <div class="quiz">
+    <div class="kicker">Mini cuestionario</div>
+    <h3>¿Qué nos permite conocer realmente un retrato antiguo?</h3>
+    <p>Elige la opción más completa.</p>
+
+    <button class="quiz-option" onclick="answerQuiz(0)">A. Toda la personalidad y las ideas de quien aparece.</button>
+    <button class="quiz-option" onclick="answerQuiz(1)">B. Algunos detalles visibles; para conocer su vida e ideas hacen falta otras fuentes.</button>
+    <button class="quiz-option" onclick="answerQuiz(2)">C. La ropa era igual para todas las personas de la época.</button>
+    <div id="quizFeedback" class="feedback" aria-live="polite"></div>
+    <button class="btn secondary" onclick="resetQuiz()">Intentarlo de nuevo</button>
+  </div>
+
+  <p>La ropa ayuda a reconstruir una época, pero las prendas no cuentan toda la historia. Para comprender a la Generación del 98, también hay que leer sus obras y conocer el contexto en el que vivieron.</p>
+
+  <div class="button-row"><button class="btn" onclick="goTo(7)">Llegar a la sorpresa final →</button></div>
+  <div class="page-number"><span>OBSERVAR E INTERPRETAR</span><span>07 / 08</span></div>
+</section>
+
+<!-- PÁGINA 8: FLOR -->
+<section class="page" id="page7">
+  <div class="kicker">07 · Una última sorpresa</div>
+  <h2>Una flor para cerrar el recorrido</h2>
+  <p class="lead">Llegaste al final, pero todavía quedan ocho pequeños detalles por descubrir. Toca los pétalos uno por uno para revelar curiosidades de la época.</p>
+
+  <div class="flower-stage">
+    <div class="small" id="petalCount">8 pétalos por descubrir</div>
+    <div class="progress"><span id="flowerProgress"></span></div>
+
+    <div class="flower" id="flower">
+      <button class="petal" aria-label="Descubrir curiosidad 1" onclick="removePetal(0)">1</button>
+      <button class="petal" aria-label="Descubrir curiosidad 2" onclick="removePetal(1)">2</button>
+      <button class="petal" aria-label="Descubrir curiosidad 3" onclick="removePetal(2)">3</button>
+      <button class="petal" aria-label="Descubrir curiosidad 4" onclick="removePetal(3)">4</button>
+      <button class="petal" aria-label="Descubrir curiosidad 5" onclick="removePetal(4)">5</button>
+      <button class="petal" aria-label="Descubrir curiosidad 6" onclick="removePetal(5)">6</button>
+      <button class="petal" aria-label="Descubrir curiosidad 7" onclick="removePetal(6)">7</button>
+      <button class="petal" aria-label="Descubrir curiosidad 8" onclick="removePetal(7)">8</button>
+      <div class="flower-center">✿</div>
+    </div>
+
+    <div class="fact-box" id="factBox" aria-live="polite">
+      Cada pétalo guarda una curiosidad. ¿Cuál descubrirás primero?
+    </div>
+
+    <button class="btn secondary" onclick="resetFlower()" style="margin-top:15px">Volver a armar la flor ↻</button>
+  </div>
+
+  <div id="finalQuiz">
+    <div class="rule"></div>
+    <div class="kicker">La última pregunta</div>
+    <h3>¿Qué aprendimos en este recorrido?</h3>
+    <p>¿Cuál de estas afirmaciones es la más acertada?</p>
+    <button class="quiz-option" onclick="answerFinal(0)">A. La moda era idéntica para todas las personas.</button>
+    <button class="quiz-option" onclick="answerFinal(1)">B. La ropa refleja costumbres y diferencias sociales, pero también hay que investigar el contexto.</button>
+    <button class="quiz-option" onclick="answerFinal(2)">C. Los escritores de la Generación del 98 vestían todos de la misma manera.</button>
+    <div id="finalFeedback" class="feedback" aria-live="polite"></div>
+  </div>
+
+  <div id="farewell" style="display:none">
+    <div class="rule"></div>
+    <div class="cover" style="min-height:auto;text-align:center">
+      <div style="font-size:45px;color:var(--wine)">❦</div>
+      <div class="kicker">Fin del recorrido</div>
+      <h2 style="font-size:39px">La historia también se viste</h2>
+      <p>La elegancia de una época no se encuentra únicamente en sus vestidos, sino también en las historias, las costumbres y las personas que los llevaron.</p>
+      <p>Gracias por recorrer con nosotros la España del 98.</p>
+      <button class="btn" onclick="goTo(0)">Volver a la portada ↺</button>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="sources">
+    <div class="kicker">Para seguir leyendo</div>
+    <h3>Fuentes de consulta</h3>
+    <p class="small">Material utilizado como base para la información histórica de esta revista.</p>
+    <ol>
+      <li><strong>Museo del Traje, Ministerio de Cultura de España.</strong> <em>Belle Époque (1898–1914).</em><br>
+        <a href="https://www.cultura.gob.es/mtraje/visita/visita-virtual/belle-epoque/" target="_blank" rel="noopener">Consultar fuente ↗</a>
+      </li>
+      <li><strong>Museo del Traje, Ministerio de Cultura de España.</strong> <em>El parque y el traje sastre.</em><br>
+        <a href="https://www.cultura.gob.es/mtraje/eu/visita/visita-virtual/belle-epoque/el-parque.html" target="_blank" rel="noopener">Consultar fuente ↗</a>
+      </li>
+      <li><strong>Red de Bibliotecas de los Archivos Estatales, Ministerio de Cultura.</strong> <em>Contexto histórico y literario de la Generación del 98.</em><br>
+        <a href="https://www.cultura.gob.es/cultura/areas/archivos/mc/red-bibliotecas-archivos-estatales/difusion-rebae/guias-lectura/generacion-98/contexto-historico-literario.html" target="_blank" rel="noopener">Consultar fuente ↗</a>
+      </li>
+      <li><strong>Museo del Traje.</strong> <em>Algunas consideraciones sobre la moda durante la Belle Époque.</em><br>
+        <a href="https://www.cultura.gob.es/dam/jcr%3A15c3eba8-07a3-4a9d-8eb1-c41f774f5ffc/indumenta-revista-del-museo-del-traje-00-2007.pdf" target="_blank" rel="noopener">Consultar artículo ↗</a>
+      </li>
+    </ol>
+    <p class="small">Retratos de escritores: enlaces de Wikimedia Commons incluidos en las imágenes. Si los reutilizas en una entrega escolar, revisa la ficha de cada archivo para comprobar su autoría y licencia.</p>
+  </div>
+
+  <div class="page-number"><span>GRACIAS POR LEER</span><span>08 / 08</span></div>
+</section>
+
+</main>
+
+<footer>
+  RECORRIDO POR LA ELEGANCIA DEL 98<br>
+  <span>Una revista digital sobre moda, historia y literatura.</span>
+</footer>
+
+<script>
+const pages = Array.from(document.querySelectorAll('.page'));
+let currentPage = 0;
+
+function goTo(index) {
+  if (index < 0 || index >= pages.length) return;
+  currentPage = index;
+  pages.forEach((page, i) => page.classList.toggle('active', i === index));
+  document.getElementById('menu').classList.remove('open');
+  document.getElementById('menuButton').setAttribute('aria-expanded', 'false');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  const isOpen = menu.classList.toggle('open');
+  document.getElementById('menuButton').setAttribute('aria-expanded', String(isOpen));
+}
+
+function reveal(id) {
+  const item = document.getElementById(id);
+  if (item) item.classList.toggle('show');
+}
+
+function showOutfit(type, button) {
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('selected'));
+  button.classList.add('selected');
+
+  const icon = document.getElementById('manIcon');
+  const detail = document.getElementById('outfitDetail');
+
+  if (type === 'formal') {
+    icon.textContent = '🎩';
+    detail.innerHTML = `
+      <h3>Una ocasión formal</h3>
+      <p>Para reuniones o acontecimientos importantes podían usarse prendas más formales, como chaqueta, chaleco, camisa de cuello y corbata. El sombrero y los tejidos completaban el conjunto.</p>`;
+  } else {
+    icon.textContent = '♙';
+    detail.innerHTML = `
+      <h3>Un paseo por la ciudad</h3>
+      <p>Podía elegirse una chaqueta, pantalón, camisa y sombrero. Los tejidos y el nivel de formalidad dependían de las costumbres locales y los recursos de cada persona.</p>`;
+  }
+}
+
+function answerQuiz(option) {
+  const feedback = document.getElementById('quizFeedback');
+  if (option === 1) {
+    feedback.textContent = '¡Exacto! Un retrato aporta pistas visuales, pero necesitamos otras fuentes para conocer la vida y las ideas de una persona.';
+    feedback.style.color = '#426546';
+  } else {
+    feedback.textContent = 'Casi. Una imagen muestra detalles visibles, pero no revela por sí sola toda la personalidad ni las condiciones de vida.';
+    feedback.style.color = '#762f3d';
+  }
+}
+
+function resetQuiz() {
+  const feedback = document.getElementById('quizFeedback');
+  feedback.textContent = '';
+}
+
+const facts = [
+  'La silueta femenina cambió durante las últimas décadas del siglo XIX. Alrededor de 1900 coexistían estilos diferentes.',
+  'El corsé ayudaba a moldear la cintura, aunque podía limitar el movimiento y resultar incómodo.',
+  'El traje sastre de chaqueta y falda ofrecía una opción práctica para ciertos paseos y actividades.',
+  'Los sombreros eran accesorios importantes en muchas ocasiones sociales, y sus diseños cambiaban con la moda.',
+  'La ropa podía variar según la actividad: trabajar, pasear y asistir a un acto formal no exigían siempre el mismo conjunto.',
+  'Las posibilidades económicas influían en la ropa que se podía comprar, encargar, reparar o reutilizar.',
+  'Las revistas de moda ayudaban a difundir tendencias, mientras los comercios ofrecían prendas confeccionadas.',
+  'Los escritores de la Generación del 98 no tenían un uniforme común: sus retratos muestran personas distintas.'
+];
+
+let removedPetals = new Set();
+
+function removePetal(index) {
+  if (removedPetals.has(index)) return;
+
+  removedPetals.add(index);
+  const petal = document.querySelectorAll('.petal')[index];
+  petal.classList.add('removed');
+
+  const dx = Math.cos(index * Math.PI / 4) * 110 + 'px';
+  const dy = Math.sin(index * Math.PI / 4) * 110 + 'px';
+  petal.style.setProperty('--dx', dx);
+  petal.style.setProperty('--dy', dy);
+
+  document.getElementById('factBox').textContent = facts[index];
+
+  const remaining = 8 - removedPetals.size;
+  document.getElementById('petalCount').textContent =
+    remaining === 1 ? 'Queda 1 pétalo por descubrir' :
+    remaining === 0 ? '¡La flor ha revelado todos sus secretos!' :
+    remaining + ' pétalos por descubrir';
+
+  document.getElementById('flowerProgress').style.width =
+    (removedPetals.size / 8 * 100) + '%';
+
+  if (remaining === 0) {
+    document.getElementById('factBox').textContent =
+      '¡Lo lograste! Descubriste las ocho curiosidades. Ahora te espera una última pregunta.';
+    document.getElementById('finalQuiz').style.display = 'block';
+    document.getElementById('finalQuiz').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function resetFlower() {
+  removedPetals.clear();
+  document.querySelectorAll('.petal').forEach(petal => {
+    petal.classList.remove('removed');
+    petal.style.removeProperty('--dx');
+    petal.style.removeProperty('--dy');
+  });
+
+  document.getElementById('petalCount').textContent = '8 pétalos por descubrir';
+  document.getElementById('flowerProgress').style.width = '0%';
+  document.getElementById('factBox').textContent =
+    'Cada pétalo guarda una curiosidad. ¿Cuál descubrirás primero?';
+  document.getElementById('finalQuiz').style.display = 'none';
+  document.getElementById('finalFeedback').textContent = '';
+  document.getElementById('farewell').style.display = 'none';
+}
+
+function answerFinal(option) {
+  const feedback = document.getElementById('finalFeedback');
+
+  if (option === 1) {
+    feedback.textContent = '¡Correcto! La vestimenta refleja costumbres y diferencias sociales, y el contexto nos ayuda a interpretarla.';
+    feedback.style.color = '#426546';
+    document.getElementById('farewell').style.display = 'block';
+    document.getElementById('farewell').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    feedback.textContent = 'No exactamente. La moda cambiaba y dependía de la situación económica, las costumbres y las preferencias de cada persona. ¡Inténtalo otra vez!';
+    feedback.style.color = '#762f3d';
+  }
+}
+</script>
+</body>
+</html>
