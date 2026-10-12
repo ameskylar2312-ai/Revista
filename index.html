@@ -6,1286 +6,1519 @@
 <title>Recorrido por la elegancia del 98</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --paper: #f5efe5;
-  --paper-dark: #e9dfd0;
-  --ink: #282321;
-  --wine: #762c3b;
-  --wine-dark: #4c1927;
-  --muted: #776d64;
-  --line: #d4c5b4;
-  --white: #fffaf3;
+  --crema: #f5efe4;
+  --papel: #fffaf1;
+  --vino: #702b3b;
+  --vino-oscuro: #421b27;
+  --negro: #242020;
+  --gris: #77706b;
+  --linea: #d9cbbb;
+  --rosa: #d9a6a4;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
 body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--crema);
+  color: var(--negro);
   font-family: 'DM Sans', sans-serif;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
-img { display: block; max-width: 100%; }
-
-a { color: var(--wine); }
-
-button { font: inherit; }
-
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  line-height: 1.15;
-  font-weight: 600;
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
-h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h3 { font-size: 1.65rem; }
+a {
+  color: inherit;
+}
 
-p { margin: 0 0 1rem; }
-
-.topline {
-  padding: 10px 5%;
-  background: var(--wine-dark);
-  color: #fff7ed;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: .72rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
+button {
+  font: inherit;
 }
 
 header {
-  padding: 18px 5%;
-  border-bottom: 1px solid var(--line);
+  background: var(--papel);
+  border-bottom: 1px solid var(--linea);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.brand {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  font-weight: 700;
-  color: var(--wine-dark);
-}
-
-nav {
+.nav {
+  max-width: 1200px;
+  min-height: 68px;
+  margin: auto;
+  padding: 12px 5%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--vino);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logo small {
+  display: block;
+  color: var(--gris);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
   flex-wrap: wrap;
-  gap: 10px 24px;
-  margin-top: 16px;
+  gap: 17px;
+  justify-content: flex-end;
 }
 
-nav a {
+.nav-links a {
+  font-size: 11px;
   text-decoration: none;
-  color: var(--ink);
-  font-size: .82rem;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-nav a:hover { color: var(--wine); }
+.nav-links a:hover {
+  color: var(--vino);
+}
 
 main {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 5%;
 }
 
 section {
   padding: 76px 0;
-  border-bottom: 1px solid var(--line);
-  scroll-margin-top: 25px;
+  border-bottom: 1px solid var(--linea);
 }
 
 .kicker {
-  color: var(--wine);
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  font-size: .72rem;
+  color: var(--vino);
+  font-size: 11px;
   font-weight: 700;
-  margin-bottom: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
 }
 
-.hero {
-  padding: 62px 0 72px;
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
-.hero-grid {
+h1 {
+  font-size: clamp(42px, 7vw, 84px);
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: clamp(31px, 4.5vw, 49px);
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.lead {
+  font-size: 17px;
+  max-width: 680px;
+  color: #514943;
+}
+
+.small-note, figcaption, .caption {
+  font-size: 11px;
+  color: var(--gris);
+  line-height: 1.6;
+}
+
+.cover {
+  padding-top: 54px;
+}
+
+.cover-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--negro);
+  margin-bottom: 28px;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.cover-grid {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 42px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 35px;
   align-items: center;
 }
 
-.hero h1 {
-  font-size: clamp(3rem, 7vw, 6.2rem);
-  color: var(--wine-dark);
-  margin: 0 0 24px;
-  letter-spacing: -.045em;
+.cover-title em {
+  color: var(--vino);
+  font-style: italic;
 }
 
-.hero .intro {
-  font-size: 1.08rem;
-  max-width: 540px;
+.cover-subtitle {
+  max-width: 450px;
+  margin-top: 22px;
+  font-size: 17px;
 }
 
-.hero-image {
-  background: var(--paper-dark);
-  padding: 12px;
-  border: 1px solid var(--line);
+.cover-image {
+  background: #e5d7c5;
+  padding: 10px;
+  border: 1px solid var(--linea);
   transform: rotate(1deg);
 }
 
-.hero-image img {
-  width: 100%;
+.cover-image img {
   height: 490px;
   object-fit: contain;
-  background: #e5d8c6;
+  background: #f2e6d5;
 }
 
-.image-caption {
-  font-size: .75rem;
-  line-height: 1.55;
-  color: var(--muted);
-  margin-top: 11px;
+.cover-image figcaption {
+  padding: 10px 4px 2px;
 }
 
-.image-caption strong { color: var(--wine-dark); }
-
-.editorial-note {
-  padding: 18px 20px;
-  margin: 22px 0;
-  border-left: 3px solid var(--wine);
-  background: #eee3d5;
-  font-size: .92rem;
+.cover-bottom {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 28px;
 }
 
-.section-heading {
+.pill {
+  border: 1px solid var(--vino);
+  color: var(--vino);
+  padding: 7px 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-head {
   display: grid;
-  grid-template-columns: 1fr .65fr;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 35px;
   align-items: end;
-  gap: 24px;
   margin-bottom: 35px;
 }
 
-.section-heading p { color: var(--muted); }
+.section-head p {
+  color: #5f5650;
+  font-size: 14px;
+}
 
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 35px;
   align-items: start;
 }
 
-.three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.pullquote {
+  padding: 28px;
+  background: var(--vino);
+  color: var(--papel);
+  margin: 24px 0;
 }
 
-.card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  padding: 20px;
-}
-
-.card h3 { margin: 10px 0 12px; }
-
-.card-image {
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  background: #e8ddcd;
-}
-
-.photo {
-  margin: 0;
-  min-width: 0;
-}
-
-.photo img {
-  width: 100%;
-  height: 410px;
-  object-fit: contain;
-  background: #e7dccb;
-  border: 1px solid var(--line);
-  padding: 8px;
-}
-
-.photo figcaption {
-  font-size: .8rem;
-  color: var(--muted);
-  line-height: 1.55;
-  padding-top: 12px;
-}
-
-.photo figcaption strong {
-  display: block;
-  color: var(--wine-dark);
-  margin-bottom: 5px;
-}
-
-.photo figcaption a { display: inline-block; margin-top: 5px; }
-
-.image-fallback {
-  min-height: 240px;
-  padding: 25px;
-  background: var(--paper-dark);
-  border: 1px dashed var(--wine);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.image-fallback a { font-weight: 700; }
-
-.timeline {
-  border-left: 2px solid var(--wine);
-  margin: 28px 0 0 8px;
-  padding-left: 26px;
-}
-
-.timeline-item {
-  position: relative;
-  margin: 0 0 27px;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -33px;
-  top: 8px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--wine);
-}
-
-.timeline-item h3 {
-  font-size: 1.25rem;
-  margin: 0 0 7px;
-}
-
-.number {
+.pullquote p {
   font-family: 'Playfair Display', serif;
-  color: var(--wine);
-  font-size: 2.7rem;
+  font-size: 25px;
+  line-height: 1.35;
+  margin-bottom: 10px;
 }
 
-.details-button, .quiz-button {
-  border: 1px solid var(--wine);
-  background: var(--wine);
-  color: white;
-  padding: 11px 17px;
-  cursor: pointer;
-  font-size: .86rem;
-  font-weight: 600;
-  margin-top: 10px;
+.pullquote small {
+  color: #ead7d2;
+  font-size: 11px;
 }
-
-.details-button:hover, .quiz-button:hover {
-  background: var(--wine-dark);
-}
-
-.more-info {
-  display: none;
-  padding: 15px 0 0;
-  color: var(--muted);
-}
-
-.more-info.open { display: block; }
-
-.dark-panel {
-  background: var(--wine-dark);
-  color: #fff7ed;
-  padding: clamp(24px, 5vw, 48px);
-  margin: 10px 0;
-}
-
-.dark-panel .kicker { color: #e9b7bf; }
-
-.dark-panel h2 { color: #fff7ed; }
-
-.dark-panel a { color: #f4d1d4; }
 
 .fact-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  margin-top: 30px;
+  margin-top: 32px;
+  border-top: 1px solid var(--linea);
+  border-bottom: 1px solid var(--linea);
 }
 
-.fact-strip > div {
-  background: var(--white);
-  padding: 23px;
+.fact {
+  padding: 22px 18px;
+  border-right: 1px solid var(--linea);
 }
 
-.fact-strip h3 {
-  font-size: 1.15rem;
-  color: var(--wine);
+.fact:last-child {
+  border-right: none;
 }
 
-.author-grid {
+.fact strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--vino);
+  margin-bottom: 5px;
+}
+
+.fact span {
+  font-size: 12px;
+  color: #5f5650;
+}
+
+.photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-.author-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  padding: 14px;
+.photo-card {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  padding: 10px;
 }
 
-.author-card img {
-  width: 100%;
-  height: 300px;
+.photo-card img {
+  height: 280px;
+  background: #e7d9c8;
   object-fit: contain;
-  background: #e8ddcd;
 }
 
-.author-card h3 { margin: 17px 0 7px; }
+.photo-card h3 {
+  font-size: 21px;
+  margin: 15px 4px 8px;
+}
 
-.author-card .date {
-  font-size: .72rem;
-  text-transform: uppercase;
-  color: var(--wine);
-  letter-spacing: .08em;
+.photo-card p, .photo-card figcaption {
+  margin: 0 4px 10px;
+}
+
+.photo-card .source-note {
+  border-top: 1px solid var(--linea);
+  padding-top: 9px;
+  margin-top: 10px;
+}
+
+.editorial-note {
+  margin-top: 28px;
+  padding: 23px;
+  border-left: 4px solid var(--vino);
+  background: #eee2d4;
+}
+
+.editorial-note strong {
+  color: var(--vino);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.detail {
+  padding: 22px;
+  border: 1px solid var(--linea);
+  background: var(--papel);
+}
+
+.detail .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--vino);
+}
+
+.detail p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+details {
+  margin-top: 12px;
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 12px;
   font-weight: 700;
+  color: var(--vino);
+  padding-top: 10px;
 }
 
-.author-card p { font-size: .91rem; }
+details p {
+  padding-top: 9px;
+}
 
-.flower-area {
-  background: #eee3d5;
-  padding: 35px 20px;
-  text-align: center;
-  margin-top: 25px;
+.writers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.writer {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  padding: 10px;
+}
+
+.writer img {
+  height: 310px;
+  object-fit: contain;
+  background: #e8ded0;
+}
+
+.writer-content {
+  padding: 16px 6px 8px;
+}
+
+.writer-content p {
+  font-size: 13px;
+}
+
+.writer-date {
+  display: inline-block;
+  color: var(--vino);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--rosa);
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+}
+
+.class-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  margin-top: 28px;
+}
+
+.class-card {
+  padding: 22px;
+  background: #eee2d4;
+  border-top: 3px solid var(--vino);
+}
+
+.class-card h3 {
+  font-size: 21px;
+}
+
+.class-card p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.flower-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.flower-wrap {
+  padding: 24px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
 }
 
 .flower {
-  width: 270px;
-  height: 270px;
-  margin: 20px auto;
+  width: 290px;
+  height: 290px;
   position: relative;
 }
 
 .petal {
   position: absolute;
-  width: 66px;
-  height: 105px;
-  left: 102px;
-  top: 27px;
-  transform-origin: 33px 108px;
-  border-radius: 50% 50% 42% 42%;
-  border: 1px solid #9e5360;
-  background: #b85f70;
-  color: white;
-  font-size: .83rem;
-  font-weight: 700;
+  width: 100px;
+  height: 128px;
+  left: 95px;
+  top: 17px;
+  transform-origin: 50% 128px;
+  border: 1px solid #a75d68;
+  border-radius: 55% 55% 42% 42%;
+  background: #a84d61;
   cursor: pointer;
-  transition: opacity .25s, transform .25s, background .25s;
+  transition: transform 0.5s ease, opacity 0.45s ease, background 0.2s ease;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.08);
 }
 
-.petal:nth-child(1) { transform: rotate(0deg); }
-.petal:nth-child(2) { transform: rotate(45deg); }
-.petal:nth-child(3) { transform: rotate(90deg); }
-.petal:nth-child(4) { transform: rotate(135deg); }
-.petal:nth-child(5) { transform: rotate(180deg); }
-.petal:nth-child(6) { transform: rotate(225deg); }
-.petal:nth-child(7) { transform: rotate(270deg); }
-.petal:nth-child(8) { transform: rotate(315deg); }
+.petal:nth-child(2) { transform: rotate(45deg); background: #bd6978; }
+.petal:nth-child(3) { transform: rotate(90deg); background: #8b374c; }
+.petal:nth-child(4) { transform: rotate(135deg); background: #c37b83; }
+.petal:nth-child(5) { transform: rotate(180deg); background: #a84d61; }
+.petal:nth-child(6) { transform: rotate(225deg); background: #bd6978; }
+.petal:nth-child(7) { transform: rotate(270deg); background: #8b374c; }
+.petal:nth-child(8) { transform: rotate(315deg); background: #c37b83; }
+
+.petal:hover {
+  background: #702b3b;
+}
 
 .petal.removed {
   opacity: 0;
   pointer-events: none;
-  transform: scale(.4) translateY(-60px);
+  transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(0.5);
 }
+
+.petal:nth-child(1).removed { --x: 0px; --y: -125px; --r: 0deg; }
+.petal:nth-child(2).removed { --x: 90px; --y: -90px; --r: 45deg; }
+.petal:nth-child(3).removed { --x: 125px; --y: 0px; --r: 90deg; }
+.petal:nth-child(4).removed { --x: 90px; --y: 90px; --r: 135deg; }
+.petal:nth-child(5).removed { --x: 0px; --y: 125px; --r: 180deg; }
+.petal:nth-child(6).removed { --x: -90px; --y: 90px; --r: 225deg; }
+.petal:nth-child(7).removed { --x: -125px; --y: 0px; --r: 270deg; }
+.petal:nth-child(8).removed { --x: -90px; --y: -90px; --r: 315deg; }
 
 .flower-center {
   position: absolute;
-  width: 72px;
-  height: 72px;
-  left: 99px;
-  top: 99px;
+  z-index: 5;
+  width: 83px;
+  height: 83px;
   border-radius: 50%;
-  background: #e5c56b;
-  color: #4d3023;
-  display: grid;
-  place-items: center;
-  font-size: .75rem;
-  font-weight: 700;
-  border: 2px solid #b68a3d;
+  top: 103px;
+  left: 103px;
+  background: #e4c68f;
+  border: 2px solid #a47a48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #492b26;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  box-shadow: 0 2px 7px #0002;
 }
 
-.flower-fact {
-  max-width: 560px;
-  min-height: 78px;
-  margin: 20px auto 0;
-  font-size: .96rem;
+.flower-info {
+  min-height: 180px;
+  padding: 25px;
+  background: var(--papel);
+  border: 1px solid var(--linea);
 }
 
-.flower-reset {
-  border: 1px solid var(--wine);
+.flower-info h3 {
+  color: var(--vino);
+}
+
+.flower-info p {
+  font-size: 14px;
+}
+
+.flower-progress {
+  font-size: 11px;
+  color: var(--gris);
+  margin-top: 15px;
+}
+
+.reset-button, .quiz-button {
+  margin-top: 16px;
+  padding: 10px 17px;
+  border: 1px solid var(--vino);
+  color: var(--vino);
   background: transparent;
-  padding: 9px 15px;
-  color: var(--wine);
   cursor: pointer;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reset-button:hover, .quiz-button:hover {
+  background: var(--vino);
+  color: white;
 }
 
 .quiz {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: var(--papel);
+  border: 1px solid var(--linea);
   padding: 28px;
 }
 
-.quiz-question {
-  font-weight: 700;
-  font-size: 1.08rem;
-  margin-bottom: 18px;
+.question {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--linea);
 }
 
-.quiz-option {
+.question p {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.question label {
   display: block;
-  width: 100%;
-  text-align: left;
-  padding: 13px 15px;
-  background: transparent;
-  border: 1px solid var(--line);
-  margin: 9px 0;
+  padding: 5px 0;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.quiz-option:hover { border-color: var(--wine); }
-
-.quiz-option.correct {
-  background: #e1eadc;
-  border-color: #58704c;
+.question input {
+  accent-color: var(--vino);
+  margin-right: 8px;
 }
 
-.quiz-option.incorrect {
-  background: #f0dfdc;
-  border-color: #a14d48;
+#quiz-result {
+  margin-top: 18px;
+  font-weight: 700;
+  color: var(--vino);
 }
 
-.quiz-feedback { margin-top: 15px; font-weight: 600; }
+.sources {
+  list-style: none;
+}
 
-.sources li { margin-bottom: 12px; }
+.sources li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--linea);
+  font-size: 13px;
+}
+
+.sources a {
+  color: var(--vino);
+  overflow-wrap: anywhere;
+}
 
 footer {
-  background: var(--wine-dark);
-  color: #fff7ed;
+  background: var(--vino-oscuro);
+  color: var(--papel);
   padding: 35px 5%;
   text-align: center;
-  font-size: .83rem;
 }
 
-footer p { margin: 4px; }
-
-@media (max-width: 780px) {
-  main { padding: 0 18px; }
-  .hero-grid, .two-col, .section-heading { grid-template-columns: 1fr; }
-  .hero-image img { height: 380px; }
-  .three-col, .author-grid { grid-template-columns: 1fr 1fr; }
-  .fact-strip { grid-template-columns: 1fr; }
-  .photo img { height: 330px; }
+footer p {
+  margin: 5px 0;
+  font-size: 12px;
 }
 
-@media (max-width: 500px) {
-  .three-col, .author-grid { grid-template-columns: 1fr; }
-  section { padding: 54px 0; }
-  .hero { padding-top: 40px; }
-  .hero h1 { font-size: 3.4rem; }
-  .author-card img { height: 340px; }
+footer .footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .cover-grid, .section-head, .two-col, .flower-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-image img {
+    height: 370px;
+  }
+
+  .photo-grid, .writers-grid, .class-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .fact {
+    border-right: none;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .fact:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 0 5%;
+  }
+
+  section {
+    padding: 52px 0;
+  }
+
+  .photo-grid, .writers-grid, .class-list, .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-topline {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .cover-image img {
+    height: 310px;
+  }
+
+  .photo-card img {
+    height: 300px;
+  }
+
+  .writer img {
+    height: 280px;
+  }
+
+  .flower {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .flower-wrap {
+    min-height: 300px;
+    overflow: hidden;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="topline">
-  <span>Revista cultural · Edición especial</span>
-  <span>España · 1898</span>
-</div>
 
 <header>
-  <div class="brand">Recorrido por la elegancia del 98</div>
-  <nav aria-label="Navegación principal">
-    <a href="#contexto">La época</a>
-    <a href="#moda">La moda</a>
-    <a href="#detalles">Detalles</a>
-    <a href="#sociedad">La sociedad</a>
-    <a href="#autores">Los autores</a>
-    <a href="#flor">La flor del 98</a>
-    <a href="#quiz">Pon a prueba lo aprendido</a>
+  <nav class="nav">
+    <div class="logo">
+      Recorrido por la elegancia del 98
+      <small>Moda · Historia · Literatura</small>
+    </div>
+    <div class="nav-links">
+      <a href="#contexto">Contexto</a>
+      <a href="#moda">La moda</a>
+      <a href="#detalles">Detalles</a>
+      <a href="#autores">Autores</a>
+      <a href="#flor">La flor</a>
+      <a href="#quiz">Quiz</a>
+    </div>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <div class="kicker">Una mirada al cambio de siglo</div>
-        <h1>Vestirse en tiempos de cambio</h1>
-        <p class="intro">
-          ¿Cómo se vestía la gente mientras España atravesaba una de las
-          crisis más importantes de su historia contemporánea? La moda de
-          finales del siglo XIX no era solo cuestión de elegancia: también
-          hablaba del dinero, las costumbres, el género y el lugar que cada
-          persona ocupaba en la sociedad.
-        </p>
-        <p>
-          En este recorrido nos acercamos a la vestimenta de alrededor de
-          1898, a las tendencias europeas que llegaron a España y al ambiente
-          cultural en el que surgió la llamada Generación del 98.
-        </p>
-      </div>
 
-      <figure class="hero-image">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/L%27Art%20et%20la%20Mode%2C%201898%2C%20No.%2018%2C%20XVIII%20Toilette%20en%20mousselin%2C%20RP-P-2009-3786.jpg"
-          alt="Ilustración histórica de moda femenina de alrededor de 1898"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:1898_fashion_plates')">
-        <figcaption class="image-caption">
-          <strong>Una silueta de finales del siglo XIX.</strong>
-          Ilustración de moda europea, publicada alrededor de 1898.
-          <br><b>Imagen tomada de las tendencias europeas.</b>
-          <br>Se utiliza como referencia visual de la moda de la época, no como
-          fotografía de una mujer española.
-          <br><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Consultar colección de ilustraciones</a>
-        </figcaption>
-      </figure>
+<!-- PORTADA -->
+<section class="cover" id="inicio">
+  <div class="cover-topline">
+    <span>Edición especial · Historia y estilo</span>
+    <span>España, finales del siglo XIX</span>
+  </div>
+
+  <div class="cover-grid">
+    <div class="cover-title">
+      <p class="kicker">Una época entre tradición y cambio</p>
+      <h1>Recorrido por la <em>elegancia</em> del 98</h1>
+      <p class="cover-subtitle">
+        Vestidos, sombreros, nuevas costumbres y escritores que observaron
+        una España en transformación. Un viaje visual a través de la moda
+        y la sociedad alrededor de 1898.
+      </p>
+      <div class="cover-bottom">
+        <span class="pill">1898</span>
+        <span class="pill">Belle Époque</span>
+        <span class="pill">Generación del 98</span>
+      </div>
     </div>
-  </section>
 
-  <section id="contexto">
-    <div class="section-heading">
-      <div>
-        <div class="kicker">01 · El contexto histórico</div>
-        <h2>1898: un país en crisis</h2>
-      </div>
+    <figure class="cover-image">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/L%27Art_et_la_Mode%2C_1898%2C_No._18%2C_XVIII_Toilette_en_mousselin%2C_RP-P-2009-3786.jpg"
+        alt="Ilustración de moda femenina publicada en Francia en 1898"
+        onerror="this.alt='Ilustración histórica de moda de finales del siglo XIX'; this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;min-height:300px;display:grid;place-items:center;padding:25px;text-align:center&quot;>Ilustración de moda europea · 1898</div>')">
+      <figcaption>
+        Ilustración de moda publicada en París en 1898. Imagen tomada de las tendencias europeas.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CONTEXTO -->
+<section id="contexto">
+  <div class="section-head">
+    <div>
+      <p class="kicker">01 · Antes de mirar los vestidos</p>
+      <h2>Una España en un punto de quiebre</h2>
+    </div>
+    <p>
+      Para entender la moda de 1898, también hay que mirar el momento
+      histórico: detrás de los vestidos y los sombreros existía una sociedad
+      con diferencias económicas y muchas preguntas sobre su futuro.
+    </p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>¿Qué ocurrió en 1898?</h3>
       <p>
-        La moda convivía con una realidad marcada por las desigualdades,
-        los cambios políticos y las preguntas sobre el futuro de España.
+        En 1898, España perdió sus últimas grandes posesiones coloniales
+        de ultramar: Cuba dejó de estar bajo soberanía española y Puerto Rico
+        y Filipinas pasaron a manos de Estados Unidos tras la guerra
+        hispano-estadounidense. El acontecimiento se convirtió en una crisis
+        política, social y moral para el país.
+      </p>
+      <p>
+        La derrota impulsó discusiones sobre el atraso económico, la educación,
+        la política y la identidad española. Intelectuales y escritores
+        empezaron a preguntarse qué país era España y cómo podía cambiar.
+      </p>
+      <div class="pullquote">
+        <p>La ropa también cuenta una historia: habla de aspiraciones, dinero, costumbres y cambios sociales.</p>
+        <small>Una mirada a la moda de finales del siglo XIX</small>
+      </div>
+    </div>
+
+    <div>
+      <h3>¿Y qué tiene que ver con la moda?</h3>
+      <p>
+        La moda no cambió de un día para otro por la crisis de 1898.
+        Las tendencias de vestir tenían su propio ritmo, influido por la
+        industria textil, las revistas, las tiendas, los cambios urbanos
+        y las diferencias entre las clases sociales.
+      </p>
+      <p>
+        En las ciudades, las personas con más recursos podían seguir las
+        novedades europeas con mayor facilidad. Mientras tanto, muchas
+        familias reutilizaban prendas, las arreglaban o compraban ropa
+        duradera. Por eso no existía una única forma de vestir para toda España.
+      </p>
+      <p>
+        La fecha de 1898 funciona como una ventana para observar una época
+        de transición: convivían las costumbres tradicionales con nuevas
+        formas de ocio, movilidad y consumo.
       </p>
     </div>
+  </div>
 
-    <div class="two-col">
-      <div>
-        <p>
-          En 1898, España perdió sus últimas grandes colonias de ultramar
-          en América y Asia tras la guerra con Estados Unidos: Cuba dejó de
-          estar bajo dominio español y Puerto Rico, Filipinas y Guam pasaron
-          a manos estadounidenses según los acuerdos de paz.
-        </p>
-        <p>
-          La derrota provocó una fuerte discusión sobre la situación del país.
-          Intelectuales y escritores reflexionaron sobre el atraso económico,
-          la educación, la política, la identidad nacional y la necesidad de
-          una transformación.
-        </p>
-        <p>
-          En ese ambiente se relaciona a un grupo de autores conocido como
-          la <em>Generación del 98</em>. No todos pensaban igual ni formaron
-          un movimiento perfectamente organizado, pero compartieron el
-          interés por examinar críticamente la realidad española.
-        </p>
-      </div>
-
-      <div class="dark-panel">
-        <div class="kicker">La moda también cuenta historias</div>
-        <h3>Una sociedad entre lo tradicional y lo moderno</h3>
-        <p>
-          Mientras las ciudades recibían nuevas tendencias, los transportes
-          y las revistas contribuían a cambiar los hábitos, buena parte de
-          la población seguía vistiendo de forma tradicional y práctica.
-        </p>
-        <p>
-          La ropa elegante de las clases acomodadas no representaba por sí
-          sola la manera de vestir de todos los españoles.
-        </p>
-      </div>
+  <div class="fact-strip">
+    <div class="fact">
+      <strong>1898</strong>
+      <span>Año de la crisis colonial y de intensos debates sobre el futuro español.</span>
     </div>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Antes de 1898 · Una moda muy estructurada</h3>
-        <p>
-          Durante gran parte del siglo XIX, las prendas interiores como el
-          corsé y las estructuras que daban volumen a las faldas ayudaban a
-          crear la silueta considerada elegante.
-        </p>
-      </div>
-      <div class="timeline-item">
-        <h3>1898 · Crisis y debate</h3>
-        <p>
-          La derrota colonial alimentó una reflexión pública sobre la
-          situación de España. La vida cotidiana, sin embargo, no cambió
-          de golpe por un solo acontecimiento.
-        </p>
-      </div>
-      <div class="timeline-item">
-        <h3>1900–1914 · La Belle Époque</h3>
-        <p>
-          Las tendencias siguieron evolucionando hacia siluetas femeninas
-          menos voluminosas, más variedad de atuendos y una difusión más
-          amplia de la moda a través de revistas y comercios.
-        </p>
-      </div>
+    <div class="fact">
+      <strong>París</strong>
+      <span>Uno de los grandes centros europeos de la alta costura y de las novedades de moda.</span>
     </div>
-  </section>
+    <div class="fact">
+      <strong>Sociedad</strong>
+      <span>La ropa reflejaba la posición económica, el trabajo y las normas sociales.</span>
+    </div>
+  </div>
+</section>
 
-  <section id="moda">
-    <div class="section-heading">
-      <div>
-        <div class="kicker">02 · Vestir a la moda</div>
-        <h2>¿Qué se llevaba?</h2>
-      </div>
+<!-- MODA -->
+<section id="moda">
+  <div class="section-head">
+    <div>
+      <p class="kicker">02 · El guardarropa de la época</p>
+      <h2>Vestirse para salir al mundo</h2>
+    </div>
+    <p>
+      Las ilustraciones de moda permiten observar las siluetas, los tejidos
+      y los accesorios que se promocionaban a finales del siglo XIX.
+      Pero una ilustración de una revista no representa necesariamente
+      la ropa cotidiana de todas las personas.
+    </p>
+  </div>
+
+  <div class="photo-grid">
+    <article class="photo-card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/L%27Art_et_la_Mode%2C_1898%2C_No._18%2C_XVIII_Toilette_en_mousselin%2C_RP-P-2009-3786.jpg"
+        alt="Vestido femenino de una ilustración francesa de 1898"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:280px;display:grid;place-items:center;background:#e7d9c8;padding:20px;text-align:center&quot;>Vestimenta femenina · Ilustración de 1898</div>")">
+      <h3>La silueta femenina</h3>
       <p>
-        Las tendencias no eran idénticas en todos los lugares. Estas
-        ilustraciones europeas permiten observar algunas formas y prendas
-        que marcaron el cambio de siglo.
+        En la moda elegante de finales del siglo XIX seguían presentes los
+        corsés, las faldas largas y los conjuntos cuidadosamente estructurados.
+        La forma de las mangas y el volumen de la falda fueron cambiando
+        con el paso de los años.
       </p>
-    </div>
+      <figcaption class="source-note">
+        <strong>Imagen tomada de las tendencias europeas.</strong>
+        Es una ilustración de moda publicada en París en 1898, no una
+        fotografía de una mujer española.
+      </figcaption>
+    </article>
 
-    <div class="editorial-note">
-      <strong>Una aclaración importante:</strong> las ilustraciones de esta
-      sección proceden de publicaciones europeas. No son fotografías tomadas
-      en España. Las usamos para explicar tendencias que circularon por
-      Europa y que también influyeron en la moda española, especialmente
-      entre los sectores con más recursos. La moda real variaba según la
-      región, la clase social y la ocasión.
-    </div>
-
-    <div class="two-col">
-      <figure class="photo">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/L%27Art%20et%20la%20Mode%2C%201898%2C%20No.%2018%2C%20XVIII%20Toilette%20en%20mousselin%2C%20RP-P-2009-3786.jpg"
-          alt="Lámina europea de moda femenina de 1898"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:1898_fashion_plates')">
-        <figcaption>
-          <strong>La elegancia femenina</strong>
-          La ropa femenina de los sectores acomodados podía incluir faldas
-          largas, cuerpos ajustados, adornos y sombreros. La silueta se
-          construía también con prendas interiores.
-          <br><b>Imagen tomada de las tendencias europeas.</b>
-          <br>Referencia visual de la época; no representa por sí sola toda
-          la vestimenta femenina española.
-          <br><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Ver ilustraciones históricas</a>
-        </figcaption>
-      </figure>
-
-      <div>
-        <h3>El ideal de elegancia</h3>
-        <p>
-          En los ambientes burgueses, la ropa podía comunicar posición
-          económica, gusto y respetabilidad. Para ocasiones formales se
-          cuidaban los tejidos, el ajuste, los complementos y el aspecto
-          general.
-        </p>
-        <p>
-          No se trataba únicamente de comprar un vestido: la silueta
-          dependía de distintas capas de ropa, de los accesorios y de
-          los cuidados que exigía cada conjunto.
-        </p>
-        <p>
-          La comodidad no siempre era la prioridad. La ropa destinada a
-          pasear, viajar o practicar deporte podía ser distinta de la
-          usada para visitas y ceremonias.
-        </p>
-      </div>
-    </div>
-
-    <div class="two-col" style="margin-top:42px">
-      <div>
-        <h3>Sombreros, guantes y accesorios</h3>
-        <p>
-          Los complementos tenían un papel importante en el aspecto final.
-          Los sombreros podían decorarse con cintas, flores y plumas.
-          Los guantes, los bolsos, los parasoles y los zapatos completaban
-          determinados atuendos de calle y de visita.
-        </p>
-        <p>
-          La elección dependía de la ocasión, la estación y las posibilidades
-          económicas. Una ilustración de moda muestra un modelo idealizado:
-          no garantiza que todas las mujeres lo usaran en la vida cotidiana.
-        </p>
-      </div>
-
-      <figure class="photo">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/De%20Gracieuse%2C%20Ge%C3%AFllustreerde%20Aglaja%2C%201898%2C%20No.%203478%2C%20RP-P-OB-103.076.jpg"
-          alt="Lámina de una revista de moda de 1898"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:1898_fashion_plates')">
-        <figcaption>
-          <strong>La moda en las revistas</strong>
-          Las publicaciones ilustradas permitían conocer modelos, cortes y
-          adornos sin estar presente en los grandes centros de moda.
-          <br><b>Imagen tomada de las tendencias europeas.</b>
-          <br>Se presenta como referencia de la prensa de moda europea.
-          <br><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Consultar archivo visual</a>
-        </figcaption>
-      </figure>
-    </div>
-
-    <div class="two-col" style="margin-top:42px">
-      <figure class="photo">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Costumes%20de%20Cyclistes%205-6-1898%2C%20nr.%203373%2C%20RP-P-2009-3785.jpg"
-          alt="Ilustración histórica de vestimenta para ciclistas"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:1898_fashion_plates')">
-        <figcaption>
-          <strong>Ropa para moverse</strong>
-          El ciclismo y otras actividades impulsaron la búsqueda de prendas
-          más prácticas. Las nuevas necesidades de movilidad ampliaron la
-          variedad de atuendos.
-          <br><b>Imagen tomada de las tendencias europeas.</b>
-          <br>Ilustración de vestimenta para ciclistas publicada en 1898;
-          no debe confundirse con un registro de la calle española.
-          <br><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Ver colección de láminas</a>
-        </figcaption>
-      </figure>
-
-      <div>
-        <h3>Cuando la comodidad empezó a importar</h3>
-        <p>
-          La ropa de paseo y de deporte no tenía por qué ser igual a la
-          vestimenta formal. El desarrollo del transporte urbano, los viajes
-          y las nuevas actividades contribuyó a que se valoraran prendas
-          que permitieran moverse con mayor facilidad.
-        </p>
-        <p>
-          Estos cambios fueron graduales. En 1898 convivían prendas muy
-          estructuradas con otras pensadas para actividades concretas.
-          La moda no cambió de un día para otro.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="detalles">
-    <div class="section-heading">
-      <div>
-        <div class="kicker">03 · Los detalles importan</div>
-        <h2>Lo que había debajo y encima</h2>
-      </div>
+    <article class="photo-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Costumes%20de%20Cyclistes%205-6-1898%2C%20nr.%203373%2C%20RP-P-2009-3785.jpg"
+        alt="Ilustración histórica de vestimenta para ciclistas en 1898"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:280px;display:grid;place-items:center;background:#e7d9c8;padding:20px;text-align:center&quot;>Moda para ciclistas · 1898</div>")">
+      <h3>La ropa también se mueve</h3>
       <p>
-        La silueta que vemos en un dibujo era el resultado de distintas
-        prendas, técnicas de confección y normas sociales.
+        El ciclismo se convirtió en una actividad moderna y abrió debates
+        sobre la ropa adecuada para moverse con mayor libertad. Algunas
+        mujeres comenzaron a usar prendas más prácticas para montar en
+        bicicleta, aunque las normas sociales sobre la vestimenta femenina
+        seguían siendo fuertes.
       </p>
-    </div>
+      <figcaption class="source-note">
+        <strong>Imagen tomada de las tendencias europeas.</strong>
+        La ilustración muestra propuestas de vestimenta para ciclistas
+        publicadas en 1898; sirve para estudiar tendencias, no para afirmar
+        que toda España vestía así.
+      </figcaption>
+    </article>
 
-    <div class="three-col">
-      <article class="card">
-        <div class="number">01</div>
-        <h3>El corsé</h3>
-        <p>
-          Prenda interior que moldeaba el torso y ayudaba a conseguir la
-          silueta deseada. Su uso y su forma variaban según la época y la
-          persona.
-        </p>
-        <button class="details-button" onclick="toggleInfo('corset')">Descubrir más</button>
-        <div class="more-info" id="corset">
-          El corsé no era la única pieza que definía el vestido: también
-          intervenían la camisa, las enaguas y la estructura de la falda.
-          Hacia el cambio de siglo la silueta femenina seguía evolucionando.
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="number">02</div>
-        <h3>La falda y sus volúmenes</h3>
-        <p>
-          Durante el siglo XIX, las estructuras interiores cambiaron la
-          forma de las faldas. El polisón había dado protagonismo al
-          volumen posterior en décadas anteriores.
-        </p>
-        <button class="details-button" onclick="toggleInfo('skirt')">Descubrir más</button>
-        <div class="more-info" id="skirt">
-          Al acercarse el siglo XX, la moda femenina continuó pasando hacia
-          siluetas distintas, menos voluminosas en ciertos aspectos. No
-          significa que todas las mujeres adoptaran los nuevos modelos al
-          mismo tiempo.
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="number">03</div>
-        <h3>El traje masculino</h3>
-        <p>
-          En los ambientes formales, el traje masculino tendía a ser sobrio,
-          con chaqueta, chaleco, pantalón y camisa. Los accesorios completaban
-          el conjunto.
-        </p>
-        <button class="details-button" onclick="toggleInfo('men')">Descubrir más</button>
-        <div class="more-info" id="men">
-          Los colores oscuros eran habituales en muchos atuendos formales.
-          El tipo de tejido, el corte, el sombrero y el estado de la ropa
-          podían indicar la posición social. La ropa de trabajo era distinta
-          del traje de visita.
-        </div>
-      </article>
-    </div>
-
-    <div class="editorial-note">
-      <strong>Para recordar:</strong> las prendas y los ideales de elegancia
-      no eran iguales para todo el mundo. Una familia trabajadora no tenía
-      necesariamente el dinero, el tiempo ni la ocasión para seguir los
-      mismos modelos que una familia acomodada.
-    </div>
-  </section>
-
-  <section id="sociedad">
-    <div class="section-heading">
-      <div>
-        <div class="kicker">04 · La moda y las diferencias sociales</div>
-        <h2>No todos vestían igual</h2>
-      </div>
+    <article class="photo-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/De%20Gracieuse%2C%20Ge%C3%AFllustreerde%20Aglaja%2C%201898%2C%20No.%203478%2C%20RP-P-OB-103.076.jpg"
+        alt="Lámina de una revista europea de moda de 1898"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:280px;display:grid;place-items:center;background:#e7d9c8;padding:20px;text-align:center&quot;>Revista ilustrada de moda · 1898</div>")">
+      <h3>Revistas y novedades</h3>
       <p>
-        La ropa permite observar las diferencias entre las posibilidades
-        de las clases acomodadas, las clases medias y quienes vivían de
-        trabajos manuales o del campo.
+        Las revistas ilustradas difundían modelos, combinaciones de colores,
+        accesorios y formas de vestir. Eran una vía para conocer las novedades
+        de otros países, aunque no todas las familias podían comprar esas
+        prendas ni seguir cada tendencia.
       </p>
+      <figcaption class="source-note">
+        <strong>Imagen tomada de las tendencias europeas.</strong>
+        Esta lámina procede de una publicación ilustrada de la época.
+        La influencia europea llegaba a España de forma desigual.
+      </figcaption>
+    </article>
+  </div>
+
+  <div class="editorial-note">
+    <p><strong>Entonces, ¿en España copiaban la moda europea?</strong></p>
+    <p>
+      En parte, sí, pero es más preciso decir que España recibía, adaptaba
+      y seguía tendencias europeas. París tenía una gran influencia en la
+      alta costura y en las revistas de moda. Comerciantes, modistas y
+      talleres difundían estilos que podían reinterpretarse según los gustos,
+      los recursos y las costumbres locales. Eso no significa que todas las
+      personas españolas vistieran igual ni que la moda europea sustituyera
+      de golpe la ropa tradicional.
+    </p>
+  </div>
+</section>
+
+<!-- DETALLES -->
+<section id="detalles">
+  <div class="section-head">
+    <div>
+      <p class="kicker">03 · Acercamiento</p>
+      <h2>Los detalles hacían el conjunto</h2>
     </div>
+    <p>
+      La elegancia de la época dependía tanto de la prenda principal como
+      de los complementos, el cuidado de la ropa y la ocasión para la que
+      se elegía cada conjunto.
+    </p>
+  </div>
 
-    <div class="fact-strip">
-      <div>
-        <h3>Clases acomodadas</h3>
-        <p>
-          Tenían más posibilidades de adquirir tejidos costosos, prendas
-          confeccionadas por profesionales y accesorios para diferentes
-          ocasiones. Podían prestar más atención a las novedades de moda.
-        </p>
-      </div>
-      <div>
-        <h3>Clases medias</h3>
-        <p>
-          Podían seguir las tendencias a través de comercios, revistas y
-          prendas confeccionadas a imitación de modelos más exclusivos.
-          La elección dependía del presupuesto familiar.
-        </p>
-      </div>
-      <div>
-        <h3>Clases trabajadoras</h3>
-        <p>
-          La ropa debía servir para el trabajo y durar. Era frecuente
-          aprovechar, reparar y reutilizar prendas. Las necesidades
-          cotidianas limitaban el acceso a las modas más costosas.
-        </p>
-      </div>
-    </div>
-
-    <div class="two-col" style="margin-top:35px">
-      <div>
-        <h3>¿España copiaba la moda francesa?</h3>
-        <p>
-          En parte, sí. Francia, y especialmente París, ejercía una gran
-          influencia en la moda europea. Sus casas de alta costura y sus
-          publicaciones difundían modelos que despertaban interés fuera
-          del país.
-        </p>
-        <p>
-          En España, las revistas, los comercios y las casas de moda
-          contribuían a que esas tendencias fueran conocidas y adaptadas.
-          Las mujeres con mayores recursos podían seguir más de cerca
-          las novedades; otras personas utilizaban versiones más sencillas
-          o mantenían formas de vestir tradicionales.
-        </p>
-        <p>
-          Pero hablar de influencia no es decir que España careciera de
-          identidad propia. Las prendas, los usos regionales y las
-          costumbres locales también formaban parte de la manera de vestir.
-        </p>
-      </div>
-
-      <div class="dark-panel">
-        <div class="kicker">La idea clave</div>
-        <h3>Una tendencia no es una regla universal</h3>
-        <p>
-          Una lámina de moda muestra un modelo propuesto o idealizado,
-          no un censo de la ropa que llevaba toda la población.
-        </p>
-        <p>
-          Por eso distinguimos entre la moda europea que influía en España
-          y la vestimenta cotidiana de las distintas regiones y grupos
-          sociales españoles.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="autores">
-    <div class="section-heading">
-      <div>
-        <div class="kicker">05 · Letras en tiempos de cambio</div>
-        <h2>Los rostros del 98</h2>
-      </div>
+  <div class="detail-grid">
+    <article class="detail">
+      <span class="number">01</span>
+      <h3>El corsé y la silueta</h3>
       <p>
-        Estos escritores reflexionaron sobre España y sobre la existencia
-        humana. Sus retratos conocidos corresponden a años posteriores a
-        1898: sirven para reconocerlos, no como fotografías exactas de ese año.
+        En muchos conjuntos femeninos formales, el corsé ayudaba a moldear
+        el torso según el ideal de silueta de la época. Su uso no era idéntico
+        en todos los grupos sociales ni en todas las situaciones.
       </p>
-    </div>
+      <details>
+        <summary>Descubrir más</summary>
+        <p>
+          La ropa interior estructurada, las enaguas y otros elementos
+          contribuían a dar forma a la ropa exterior. La silueta cambió
+          con el tiempo: no debe confundirse toda la moda del siglo XIX
+          con una sola forma de vestido.
+        </p>
+      </details>
+    </article>
 
-    <div class="editorial-note">
-      <strong>Nota sobre las fotografías:</strong> los retratos de esta
-      sección son posteriores a 1898. Se incluyen como imágenes históricas
-      de los autores, y sus fechas se indican para no confundirlas con
-      fotografías tomadas durante el año de la crisis.
-    </div>
+    <article class="detail">
+      <span class="number">02</span>
+      <h3>Sombreros y tocados</h3>
+      <p>
+        Los sombreros eran accesorios importantes en muchos atuendos
+        femeninos de calle. Podían adornarse con cintas, flores, plumas
+        y otros elementos.
+      </p>
+      <details>
+        <summary>Descubrir más</summary>
+        <p>
+          El tipo de sombrero dependía de la moda, la ocasión y los recursos
+          disponibles. Las imágenes de revistas muestran a menudo modelos
+          especialmente elaborados, pensados para presentar novedades.
+        </p>
+      </details>
+    </article>
 
-    <div class="author-grid">
-      <article class="author-card">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Miguel%20de%20Unamuno%201914.png"
-          alt="Retrato histórico de Miguel de Unamuno"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:Miguel_de_Unamuno')">
-        <div class="date">Retrato de 1914</div>
+    <article class="detail">
+      <span class="number">03</span>
+      <h3>Guantes, parasoles y bolsos</h3>
+      <p>
+        Los complementos ayudaban a completar un conjunto y podían comunicar
+        cuidado personal y posición social. Los guantes y parasoles aparecen
+        con frecuencia en las ilustraciones de moda femenina.
+      </p>
+      <details>
+        <summary>Descubrir más</summary>
+        <p>
+          No eran accesorios universales para todas las personas. La
+          posibilidad de comprarlos y mantenerlos dependía del dinero,
+          la actividad diaria y la ocasión.
+        </p>
+      </details>
+    </article>
+
+    <article class="detail">
+      <span class="number">04</span>
+      <h3>El traje masculino</h3>
+      <p>
+        En la vestimenta masculina urbana formal eran habituales los trajes
+        de chaqueta, los chalecos, las camisas y los sombreros. La sobriedad
+        de los colores podía contrastar con los detalles de corbatas y relojes.
+      </p>
+      <details>
+        <summary>Descubrir más</summary>
+        <p>
+          Tampoco existía un único vestuario masculino. La ropa de un
+          trabajador, un campesino y un hombre de una familia acomodada
+          podía ser muy diferente. La ocupación y el clima también influían.
+        </p>
+      </details>
+    </article>
+  </div>
+
+  <div class="editorial-note">
+    <strong>Una precisión histórica</strong>
+    <p>
+      Estas descripciones resumen tendencias generales de finales del siglo
+      XIX. La moda cambiaba con el tiempo y variaba según la región, la
+      clase social, la edad, el trabajo y la ocasión. No todas las personas
+      podían acceder a la vestimenta que aparecía en las revistas.
+    </p>
+  </div>
+</section>
+
+<!-- AUTORES -->
+<section id="autores">
+  <div class="section-head">
+    <div>
+      <p class="kicker">04 · Letras en tiempos de cambio</p>
+      <h2>La Generación del 98</h2>
+    </div>
+    <p>
+      El nombre reúne a un grupo de escritores españoles vinculados por su
+      reflexión sobre la crisis de España y sus preocupaciones culturales.
+      No todos pensaban igual, pero muchos cuestionaron la situación del país
+      y exploraron nuevas formas de escribir.
+    </p>
+  </div>
+
+  <div class="writers-grid">
+    <article class="writer">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miguel_de_Unamuno_1914.png"
+        alt="Retrato histórico de Miguel de Unamuno publicado en 1914"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:310px;display:grid;place-items:center;background:#e8ded0;padding:20px;text-align:center&quot;>Miguel de Unamuno · Retrato histórico</div>")">
+      <div class="writer-content">
+        <span class="writer-date">Retrato de 1914</span>
         <h3>Miguel de Unamuno</h3>
         <p>
-          Escritor, filósofo y profesor. En sus obras exploró la fe, la
-          duda, la identidad, la muerte y los conflictos interiores.
-          Le preocupaba profundamente el futuro cultural de España.
+          Escritor, filósofo y profesor. Reflexionó sobre la fe, la duda,
+          la identidad, la existencia y el sentido de la vida. En sus textos
+          aparece con frecuencia una tensión entre las preguntas personales
+          y las preocupaciones por España.
         </p>
         <p>
-          Su escritura invita a pensar en las contradicciones humanas y
-          en la dificultad de encontrar respuestas definitivas.
+          <strong>Para recordar:</strong> su escritura no se limitó a describir
+          la realidad; también buscó provocar reflexión y debate.
         </p>
-        <a href="https://commons.wikimedia.org/wiki/Category:Miguel_de_Unamuno" target="_blank" rel="noopener">Fuente del retrato</a>
-      </article>
+      </div>
+    </article>
 
-      <article class="author-card">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Retrato%20de%20P%C3%ADo%20Baroja.png"
-          alt="Retrato histórico de Pío Baroja"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:P%C3%ADo_Baroja')">
-        <div class="date">Retrato de alrededor de 1910</div>
+    <article class="writer">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Retrato%20de%20P%C3%ADo%20Baroja.png"
+        alt="Retrato histórico del escritor Pío Baroja"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:310px;display:grid;place-items:center;background:#e8ded0;padding:20px;text-align:center&quot;>Pío Baroja · Retrato histórico</div>")">
+      <div class="writer-content">
+        <span class="writer-date">Retrato de alrededor de 1910</span>
         <h3>Pío Baroja</h3>
         <p>
-          Novelista conocido por su estilo directo y por presentar
-          personajes inconformes, solitarios o enfrentados a una sociedad
-          que no les ofrece respuestas fáciles.
+          Novelista conocido por su estilo directo, sus personajes
+          inconformes y sus relatos sobre personas que se enfrentan a una
+          sociedad difícil. Sus obras muestran ambientes urbanos, conflictos
+          sociales y personajes que buscan su lugar en el mundo.
         </p>
         <p>
-          Sus novelas retratan conflictos sociales y personales, y muestran
-          una mirada crítica sobre la realidad de su tiempo.
+          <strong>Para recordar:</strong> su prosa suele ser ágil y poco
+          ornamental, con atención a la vida cotidiana y a los conflictos humanos.
         </p>
-        <a href="https://commons.wikimedia.org/wiki/Category:P%C3%ADo_Baroja" target="_blank" rel="noopener">Fuente del retrato</a>
-      </article>
+      </div>
+    </article>
 
-      <article class="author-card">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Azor%C3%ADn.png"
-          alt="Retrato histórico de Azorín"
-          loading="lazy"
-          onerror="imageError(this, 'https://commons.wikimedia.org/wiki/Category:Azor%C3%ADn')">
-        <div class="date">Retrato de alrededor de 1912</div>
+    <article class="writer">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Azor%C3%ADn.png"
+        alt="Retrato histórico del escritor Azorín"
+        loading="lazy"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=&quot;height:310px;display:grid;place-items:center;background:#e8ded0;padding:20px;text-align:center&quot;>Azorín · Retrato histórico</div>")">
+      <div class="writer-content">
+        <span class="writer-date">Retrato de 1912</span>
         <h3>Azorín</h3>
         <p>
-          José Martínez Ruiz, conocido como Azorín, fue escritor y
-          periodista. Su prosa se caracteriza por la atención a los
-          paisajes, los pequeños detalles y el paso del tiempo.
+          Escritor y periodista cuyo estilo se caracteriza por la precisión,
+          la observación y las descripciones cuidadosas. Prestó atención a
+          los paisajes, los pueblos, los objetos y la memoria histórica.
         </p>
         <p>
-          En sus textos, los pueblos, las calles y los lugares cotidianos
-          sirven para reflexionar sobre la memoria y la identidad española.
+          <strong>Para recordar:</strong> en sus textos, los detalles
+          cotidianos pueden convertirse en una forma de pensar sobre el
+          tiempo y la identidad española.
         </p>
-        <a href="https://commons.wikimedia.org/wiki/Category:Azor%C3%ADn" target="_blank" rel="noopener">Fuente del retrato</a>
-      </article>
-    </div>
+      </div>
+    </article>
+  </div>
 
-    <div class="editorial-note">
-      <strong>¿Qué tienen en común?</strong> Los tres se relacionan con la
-      renovación literaria de finales del siglo XIX y comienzos del XX.
-      Sin embargo, cada uno desarrolló una voz y unos intereses propios:
-      no escribían exactamente igual ni compartían todas sus ideas.
-    </div>
-  </section>
-
-  <section id="flor">
-    <div class="kicker">06 · Un pequeño archivo interactivo</div>
-    <h2>La flor del 98</h2>
+  <div class="editorial-note">
+    <strong>¿Las fotografías son de 1898?</strong>
     <p>
-      Cada pétalo esconde un dato. Toca uno para descubrirlo y ve
-      deshojando la flor hasta completar el recorrido.
+      No necesariamente. Los retratos que aparecen aquí son posteriores:
+      el de Unamuno corresponde a 1914, el de Baroja es de alrededor de 1910
+      y el de Azorín se publicó hacia 1912. Se incluyen como retratos
+      históricos de los escritores, no como fotografías tomadas exactamente
+      en el año de la crisis colonial.
     </p>
+  </div>
 
-    <div class="flower-area">
+  <div class="two-col" style="margin-top:32px">
+    <div>
+      <h3>¿Qué tenían en común?</h3>
+      <p>
+        La preocupación por España, la crítica a ciertos aspectos de la
+        sociedad y el interés por la identidad nacional aparecen en buena
+        parte de sus obras. Sin embargo, la Generación del 98 no fue un
+        grupo con una única ideología ni una lista cerrada de ideas.
+      </p>
+    </div>
+    <div>
+      <h3>¿Por qué siguen siendo importantes?</h3>
+      <p>
+        Sus textos permiten estudiar cómo una crisis histórica puede
+        convertirse en una pregunta cultural. En lugar de limitarse a contar
+        acontecimientos, muchos de estos autores exploraron cómo se vivían,
+        se sentían y se interpretaban esos cambios.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CLASE SOCIAL -->
+<section id="sociedad">
+  <div class="section-head">
+    <div>
+      <p class="kicker">05 · La moda no era igual para todos</p>
+      <h2>El precio de la elegancia</h2>
+    </div>
+    <p>
+      Las prendas también revelaban desigualdades. La ropa de las revistas
+      mostraba ideales de estilo, pero las posibilidades reales dependían
+      de los ingresos, el trabajo, la región y las circunstancias familiares.
+    </p>
+  </div>
+
+  <div class="class-list">
+    <article class="class-card">
+      <h3>Familias acomodadas</h3>
+      <p>
+        Podían tener mayor acceso a prendas nuevas, tejidos costosos,
+        accesorios y servicios de modistas. En estos grupos, la vestimenta
+        formal también podía servir para expresar posición social.
+      </p>
+    </article>
+
+    <article class="class-card">
+      <h3>Clases trabajadoras</h3>
+      <p>
+        La ropa debía ser útil, resistente y adecuada para el trabajo.
+        Era común aprovechar las prendas durante más tiempo, repararlas
+        y adaptarlas a las necesidades de la familia.
+      </p>
+    </article>
+
+    <article class="class-card">
+      <h3>Campo y ciudad</h3>
+      <p>
+        El clima, la ocupación y las costumbres locales influían en la
+        vestimenta. Las tendencias urbanas difundidas por revistas no
+        describen por sí solas cómo se vestía en todas las regiones rurales.
+      </p>
+    </article>
+  </div>
+
+  <div class="pullquote" style="margin-top:28px">
+    <p>Una tendencia podía aparecer en una revista antes de convertirse en una posibilidad real para la mayoría.</p>
+    <small>Moda, consumo y diferencias sociales a finales del siglo XIX</small>
+  </div>
+</section>
+
+<!-- FLOR INTERACTIVA -->
+<section id="flor">
+  <div class="section-head">
+    <div>
+      <p class="kicker">06 · Una pausa interactiva</p>
+      <h2>Deshojando la historia</h2>
+    </div>
+    <p>
+      Cada pétalo esconde un dato. Toca uno para retirarlo y descubrir
+      una pequeña curiosidad sobre la moda, la sociedad y el contexto de 1898.
+      Los pétalos no llevan números: tendrás que elegirlos por tu cuenta.
+    </p>
+  </div>
+
+  <div class="flower-layout">
+    <div class="flower-wrap">
       <div class="flower" id="flower">
-        <button class="petal" aria-label="Descubrir dato 1" onclick="revealPetal(0)">1</button>
-        <button class="petal" aria-label="Descubrir dato 2" onclick="revealPetal(1)">2</button>
-        <button class="petal" aria-label="Descubrir dato 3" onclick="revealPetal(2)">3</button>
-        <button class="petal" aria-label="Descubrir dato 4" onclick="revealPetal(3)">4</button>
-        <button class="petal" aria-label="Descubrir dato 5" onclick="revealPetal(4)">5</button>
-        <button class="petal" aria-label="Descubrir dato 6" onclick="revealPetal(5)">6</button>
-        <button class="petal" aria-label="Descubrir dato 7" onclick="revealPetal(6)">7</button>
-        <button class="petal" aria-label="Descubrir dato 8" onclick="revealPetal(7)">8</button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(0)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(1)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(2)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(3)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(4)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(5)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(6)"></button>
+        <button class="petal" aria-label="Descubrir dato histórico" onclick="revealPetal(7)"></button>
         <div class="flower-center">1898</div>
       </div>
+    </div>
 
-      <p id="flowerFact" class="flower-fact" aria-live="polite">
-        Elige un pétalo para revelar un dato histórico.
+    <div class="flower-info" aria-live="polite">
+      <p class="kicker">Tu descubrimiento</p>
+      <h3 id="fact-title">Elige un pétalo</h3>
+      <p id="fact-text">
+        Cada pétalo esconde un dato diferente. Toca cualquiera para empezar
+        a descubrir la historia que hay detrás de la elegancia del 98.
       </p>
-      <button class="flower-reset" onclick="resetFlower()">Volver a armar la flor</button>
+      <p class="flower-progress" id="flower-progress">Has descubierto 0 de 8 datos.</p>
+      <button class="reset-button" onclick="resetFlower()">Volver a colocar los pétalos</button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="quiz">
-    <div class="kicker">07 · Antes de cerrar la revista</div>
-    <h2>¿Qué tanto descubriste?</h2>
-    <p>Responde estas preguntas para comprobar lo aprendido.</p>
-
-    <div class="quiz">
-      <div id="quizQuestion" class="quiz-question"></div>
-      <div id="quizOptions"></div>
-      <div id="quizFeedback" class="quiz-feedback" aria-live="polite"></div>
-      <button class="quiz-button" id="nextQuestion" onclick="nextQuiz()" style="display:none">Siguiente pregunta</button>
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="section-head">
+    <div>
+      <p class="kicker">07 · Comprueba lo aprendido</p>
+      <h2>¿Cuánto descubriste?</h2>
     </div>
-  </section>
-
-  <section id="fuentes">
-    <div class="kicker">Para seguir investigando</div>
-    <h2>Fuentes y referencias</h2>
     <p>
-      Estas fuentes permiten ampliar la información sobre la historia
-      de la indumentaria y consultar las imágenes históricas utilizadas.
+      Responde estas preguntas para repasar algunos puntos importantes
+      del recorrido. Al final podrás comprobar tu resultado.
     </p>
+  </div>
 
-    <ul class="sources">
-      <li>
-        <strong>Museo del Traje — Belle Époque (1898–1914).</strong>
-        Contexto sobre la evolución de la silueta femenina, la difusión
-        de la moda, las revistas y las nuevas actividades.
-        <br><a href="https://www.cultura.gob.es/mtraje/visita/visita-virtual/belle-epoque/" target="_blank" rel="noopener">Consultar el Museo del Traje</a>
-      </li>
-      <li>
-        <strong>Museo del Traje — Del miriñaque al polisón (1868–1898).</strong>
-        Información sobre las estructuras de las faldas y la evolución
-        de la vestimenta durante el siglo XIX.
-        <br><a href="https://www.cultura.gob.es/mtraje/visita/visita-virtual/mirinaque-polison.html" target="_blank" rel="noopener">Consultar el Museo del Traje</a>
-      </li>
-      <li>
-        <strong>Biblioteca Nacional de España — La alta costura y lo 'chic' fueron la moda del siglo XIX.</strong>
-        Contexto sobre París, la alta costura y la difusión de la moda
-        en España.
-        <br><a href="https://www.bne.es/es/blog/blog-bne/la-alta-costura-y-lo-chic-fueron-la-moda-del-siglo-xix" target="_blank" rel="noopener">Consultar la Biblioteca Nacional de España</a>
-      </li>
-      <li>
-        <strong>Wikimedia Commons — Láminas de moda de 1898.</strong>
-        Colección de ilustraciones históricas europeas.
-        <br><a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">Consultar las ilustraciones</a>
-      </li>
-      <li>
-        <strong>Wikimedia Commons — Retratos de los autores.</strong>
-        Colecciones de imágenes históricas de Miguel de Unamuno,
-        Pío Baroja y Azorín.
-        <br><a href="https://commons.wikimedia.org/wiki/Category:Miguel_de_Unamuno" target="_blank" rel="noopener">Unamuno</a> ·
-        <a href="https://commons.wikimedia.org/wiki/Category:P%C3%ADo_Baroja" target="_blank" rel="noopener">Pío Baroja</a> ·
-        <a href="https://commons.wikimedia.org/wiki/Category:Azor%C3%ADn" target="_blank" rel="noopener">Azorín</a>
-      </li>
-    </ul>
-
-    <div class="editorial-note">
-      <strong>Nota editorial:</strong> las ilustraciones de moda citadas
-      se presentan como referencias de tendencias europeas. No se deben
-      interpretar como fotografías documentales de la vestimenta cotidiana
-      en España. Los retratos de los escritores tienen fechas posteriores
-      a 1898, indicadas en sus respectivas fichas.
+  <form class="quiz" id="quiz-form">
+    <div class="question">
+      <p>1. ¿Qué ocurrió en España en 1898?</p>
+      <label><input type="radio" name="q1" value="a"> Se inició la Revolución Industrial española.</label>
+      <label><input type="radio" name="q1" value="b"> España perdió sus últimas grandes posesiones coloniales de ultramar.</label>
+      <label><input type="radio" name="q1" value="c"> Se fundó la Generación del 98 como partido político.</label>
     </div>
-  </section>
+
+    <div class="question">
+      <p>2. ¿Qué ciudad europea tuvo gran influencia en la alta costura?</p>
+      <label><input type="radio" name="q2" value="a"> París.</label>
+      <label><input type="radio" name="q2" value="b"> Atenas.</label>
+      <label><input type="radio" name="q2" value="c"> Estocolmo.</label>
+    </div>
+
+    <div class="question">
+      <p>3. ¿Las ilustraciones de moda europeas representan exactamente cómo vestían todas las personas españolas?</p>
+      <label><input type="radio" name="q3" value="a"> Sí, todo el mundo seguía las mismas tendencias.</label>
+      <label><input type="radio" name="q3" value="b"> No, muestran propuestas de moda que podían influir de forma desigual.</label>
+      <label><input type="radio" name="q3" value="c"> Sí, porque no existían diferencias económicas.</label>
+    </div>
+
+    <div class="question">
+      <p>4. ¿Cuál fue una preocupación frecuente de los escritores de la Generación del 98?</p>
+      <label><input type="radio" name="q4" value="a"> La identidad y la situación de España.</label>
+      <label><input type="radio" name="q4" value="b"> La conquista del espacio.</label>
+      <label><input type="radio" name="q4" value="c"> La invención de las redes sociales.</label>
+    </div>
+
+    <div class="question">
+      <p>5. ¿Por qué la ropa podía variar entre personas de la misma época?</p>
+      <label><input type="radio" name="q5" value="a"> Porque la ropa no tenía ninguna relación con la vida diaria.</label>
+      <label><input type="radio" name="q5" value="b"> Porque la economía, el trabajo, la región y la ocasión influían en la vestimenta.</label>
+      <label><input type="radio" name="q5" value="c"> Porque solo se permitía usar un tipo de ropa.</label>
+    </div>
+
+    <button class="quiz-button" type="submit">Comprobar respuestas</button>
+    <p id="quiz-result" aria-live="polite"></p>
+  </form>
+</section>
+
+<!-- FUENTES -->
+<section id="fuentes">
+  <div class="section-head">
+    <div>
+      <p class="kicker">08 · Para seguir investigando</p>
+      <h2>Fuentes y créditos</h2>
+    </div>
+    <p>
+      La información histórica y las imágenes deben poder consultarse.
+      Estas fuentes permiten ampliar el tema y verificar las ilustraciones
+      y los retratos utilizados en la revista.
+    </p>
+  </div>
+
+  <h3>Moda e historia del vestido</h3>
+  <ul class="sources">
+    <li>
+      <strong>Museo del Traje (España).</strong>
+      <a href="https://www.cultura.gob.es/mtraje/visita/visita-virtual/belle-epoque/" target="_blank" rel="noopener">
+        Belle Époque (1898–1914)
+      </a>.
+      Información sobre la moda del periodo.
+    </li>
+    <li>
+      <strong>Museo del Traje (España).</strong>
+      <a href="https://www.cultura.gob.es/mtraje/visita/visita-virtual/mirinaque-polison.html" target="_blank" rel="noopener">
+        Del miriñaque al polisón (1868–1898)
+      </a>.
+      Recorrido por cambios de la silueta y del vestido.
+    </li>
+    <li>
+      <strong>Biblioteca Nacional de España.</strong>
+      <a href="https://www.bne.es/es/blog/blog-bne/la-alta-costura-y-lo-chic-fueron-la-moda-del-siglo-xix" target="_blank" rel="noopener">
+        La alta costura y lo «chic» fueron la moda del siglo XIX
+      </a>.
+    </li>
+  </ul>
+
+  <h3 style="margin-top:30px">Imágenes históricas</h3>
+  <ul class="sources">
+    <li>
+      <strong>L’Art et la Mode, 1898.</strong>
+      <a href="https://commons.wikimedia.org/wiki/File:L%27Art_et_la_Mode,_1898,_No._18,_XVIII_Toilette_en_mousselin,_RP-P-2009-3786.jpg" target="_blank" rel="noopener">
+        Ilustración de vestido femenino
+      </a>.
+      Lámina de moda publicada en París en 1898.
+    </li>
+    <li>
+      <strong>Wikimedia Commons.</strong>
+      <a href="https://commons.wikimedia.org/wiki/Category:1898_fashion_plates" target="_blank" rel="noopener">
+        Categoría de láminas de moda de 1898
+      </a>.
+      Colección de ilustraciones históricas europeas.
+    </li>
+    <li>
+      <strong>Miguel de Unamuno.</strong>
+      <a href="https://commons.wikimedia.org/wiki/File:Miguel_de_Unamuno_1914.png" target="_blank" rel="noopener">
+        Retrato publicado en 1914
+      </a>.
+    </li>
+    <li>
+      <strong>Pío Baroja.</strong>
+      <a href="https://commons.wikimedia.org/wiki/File:Retrato_de_P%C3%ADo_Baroja.png" target="_blank" rel="noopener">
+        Retrato histórico
+      </a>.
+      Archivo de la Biblioteca Nacional de España.
+    </li>
+    <li>
+      <strong>Azorín.</strong>
+      <a href="https://commons.wikimedia.org/wiki/File:Azor%C3%ADn.png" target="_blank" rel="noopener">
+        Retrato publicado hacia 1912
+      </a>.
+    </li>
+  </ul>
+
+  <div class="editorial-note">
+    <strong>Nota sobre las imágenes</strong>
+    <p>
+      Las láminas de moda incluidas son referencias visuales europeas
+      de finales del siglo XIX. Se utilizan para estudiar tendencias que
+      podían influir en España, no como prueba de que toda la población
+      española se vestía de esa manera. Los retratos de los escritores
+      también son posteriores a 1898 y sus fechas se indican junto a ellos.
+    </p>
+    <p>
+      Los enlaces de imágenes llevan a archivos de Wikimedia Commons.
+      La disponibilidad, las condiciones de reutilización y la atribución
+      concreta deben comprobarse en la ficha de cada archivo.
+    </p>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <p><strong>Recorrido por la elegancia del 98</strong></p>
-  <p>Moda, sociedad y literatura en torno a 1898.</p>
-  <p>Revista digital educativa.</p>
+  <p class="footer-title">Recorrido por la elegancia del 98</p>
+  <p>Una revista digital sobre moda, sociedad e historia.</p>
+  <p>España · Finales del siglo XIX · 1898</p>
 </footer>
 
 <script>
-function imageError(img, sourceUrl) {
-  if (!img || img.dataset.failed === "true") return;
-  img.dataset.failed = "true";
-
-  const box = document.createElement("div");
-  box.className = "image-fallback";
-  box.innerHTML =
-    "<p>Esta imagen no se pudo cargar automáticamente.</p>" +
-    "<a target='_blank' rel='noopener'>Abrir la colección histórica</a>";
-
-  box.querySelector("a").href = sourceUrl;
-  img.replaceWith(box);
-}
-
-function toggleInfo(id) {
-  const info = document.getElementById(id);
-  info.classList.toggle("open");
-}
-
-const flowerFacts = [
-  "En 1898, la derrota frente a Estados Unidos y la pérdida de las últimas grandes colonias de ultramar provocaron un intenso debate sobre el futuro de España.",
-  "París fue uno de los grandes centros de la moda europea. Sus casas de costura y publicaciones influyeron en las tendencias de otros países.",
-  "Las revistas ilustradas ayudaban a difundir modelos de vestidos, accesorios y novedades de moda.",
-  "El corsé y otras prendas interiores contribuían a dar forma a la silueta femenina de finales del siglo XIX.",
-  "Los trajes masculinos formales tendían a ser sobrios, y los colores oscuros eran habituales en muchos conjuntos.",
-  "Las tendencias no llegaban de la misma manera a todas las personas: el dinero, el lugar de residencia y el trabajo influían en la ropa que podían usar.",
-  "La moda para practicar deporte o desplazarse podía ser distinta de la vestimenta destinada a visitas y ceremonias.",
-  "La Generación del 98 se asocia con escritores que reflexionaron críticamente sobre España, aunque sus ideas y estilos no eran idénticos."
+const facts = [
+  {
+    title: "La moda viajaba en papel",
+    text: "Las revistas ilustradas ayudaban a difundir modelos y novedades de vestir entre distintos países. Su influencia dependía de la circulación de las publicaciones, las tiendas y los recursos de cada persona."
+  },
+  {
+    title: "París marcaba tendencias",
+    text: "París fue uno de los grandes centros de la alta costura europea. Sus diseños y publicaciones influyeron en otros lugares, incluida España, donde las tendencias podían adaptarse a los gustos y posibilidades locales."
+  },
+  {
+    title: "No todo era lujo",
+    text: "Muchas personas no podían comprar prendas nuevas con frecuencia. Reparar, reutilizar y adaptar la ropa eran prácticas importantes para aprovechar los recursos familiares."
+  },
+  {
+    title: "La ropa hablaba de la ocasión",
+    text: "La vestimenta variaba según la actividad, el trabajo y el evento. Un conjunto para una ocasión formal no necesariamente era el mismo que se utilizaba para las tareas cotidianas."
+  },
+  {
+    title: "El ciclismo trajo debates",
+    text: "El uso de la bicicleta abrió discusiones sobre la movilidad y la ropa práctica, especialmente para las mujeres. La indumentaria podía convertirse en parte de los debates sobre costumbres y libertad."
+  },
+  {
+    title: "1898 fue más que una fecha",
+    text: "La derrota colonial impulsó una crisis política y cultural. Intelectuales y escritores reflexionaron sobre la identidad, los problemas sociales y el futuro de España."
+  },
+  {
+    title: "Los escritores también observaban",
+    text: "Autores asociados a la Generación del 98 exploraron la vida cotidiana, los paisajes, las preocupaciones personales y la situación del país. No compartían todas las ideas, pero sí muchas inquietudes sobre España."
+  },
+  {
+    title: "Una misma época, muchas realidades",
+    text: "No existía una sola forma de vestir en España. Las diferencias económicas, la región, el clima, el oficio y las costumbres influían en la ropa de cada persona."
+  }
 ];
+
+let discovered = new Set();
 
 function revealPetal(index) {
   const petals = document.querySelectorAll(".petal");
-  const petal = petals[index];
+  const title = document.getElementById("fact-title");
+  const text = document.getElementById("fact-text");
+  const progress = document.getElementById("flower-progress");
 
-  if (!petal || petal.classList.contains("removed")) return;
+  if (discovered.has(index)) {
+    title.textContent = facts[index].title;
+    text.textContent = facts[index].text;
+    return;
+  }
 
-  petal.classList.add("removed");
-  document.getElementById("flowerFact").textContent = flowerFacts[index];
+  discovered.add(index);
+  petals[index].classList.add("removed");
+  petals[index].setAttribute("aria-label", "Pétalo descubierto");
 
-  if (document.querySelectorAll(".petal:not(.removed)").length === 0) {
-    document.getElementById("flowerFact").textContent +=
-      " ¡Has descubierto todos los datos! Puedes volver a armar la flor cuando quieras.";
+  title.textContent = facts[index].title;
+  text.textContent = facts[index].text;
+  progress.textContent = "Has descubierto " + discovered.size + " de 8 datos.";
+
+  if (discovered.size === facts.length) {
+    progress.textContent = "¡Has descubierto los 8 datos! Puedes volver a colocar los pétalos.";
   }
 }
 
 function resetFlower() {
-  document.querySelectorAll(".petal").forEach(petal => {
+  discovered.clear();
+
+  document.querySelectorAll(".petal").forEach((petal) => {
     petal.classList.remove("removed");
+    petal.setAttribute("aria-label", "Descubrir dato histórico");
   });
-  document.getElementById("flowerFact").textContent =
-    "Elige un pétalo para revelar un dato histórico.";
+
+  document.getElementById("fact-title").textContent = "Elige un pétalo";
+  document.getElementById("fact-text").textContent =
+    "Cada pétalo esconde un dato diferente. Toca cualquiera para empezar a descubrir la historia que hay detrás de la elegancia del 98.";
+  document.getElementById("flower-progress").textContent =
+    "Has descubierto 0 de 8 datos.";
 }
 
-const quiz = [
-  {
-    question: "¿Por qué se relaciona 1898 con una crisis importante en España?",
-    options: [
-      "Porque comenzó la Primera Guerra Mundial.",
-      "Por la derrota frente a Estados Unidos y la pérdida de sus últimas grandes colonias de ultramar.",
-      "Porque se inventaron las revistas ilustradas."
-    ],
-    answer: 1,
-    explanation: "Correcto: la derrota colonial impulsó un gran debate sobre el futuro de España."
-  },
-  {
-    question: "¿Qué papel tuvieron las revistas de moda?",
-    options: [
-      "Ayudaron a difundir modelos y novedades de vestimenta.",
-      "Hicieron que toda la población vistiera igual.",
-      "Solo publicaban noticias políticas."
-    ],
-    answer: 0,
-    explanation: "Las revistas difundían tendencias, pero no significaban que todo el mundo pudiera comprarlas o seguirlas."
-  },
-  {
-    question: "¿Qué significa que una imagen esté tomada de las tendencias europeas?",
-    options: [
-      "Que demuestra cómo vestían todas las personas de España.",
-      "Que es una referencia visual europea para explicar tendencias que también influyeron en España.",
-      "Que fue tomada en una calle de Madrid."
-    ],
-    answer: 1,
-    explanation: "Exacto: una lámina europea no es una fotografía de la vida cotidiana española."
-  },
-  {
-    question: "¿Qué tenían en común Unamuno, Baroja y Azorín?",
-    options: [
-      "Eran diseñadores de moda.",
-      "Fueron escritores relacionados con la Generación del 98.",
-      "Vivieron exactamente la misma experiencia y pensaban igual."
-    ],
-    answer: 1,
-    explanation: "Los tres se relacionan con la Generación del 98, aunque cada uno tuvo su propio estilo e ideas."
-  }
-];
+document.getElementById("quiz-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-let quizIndex = 0;
-let quizAnswered = false;
+  const answers = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "a",
+    q5: "b"
+  };
 
-function renderQuiz() {
-  const item = quiz[quizIndex];
-  quizAnswered = false;
+  let score = 0;
+  let unanswered = 0;
 
-  document.getElementById("quizQuestion").textContent =
-    "Pregunta " + (quizIndex + 1) + " de " + quiz.length + ": " + item.question;
+  for (const question in answers) {
+    const selected = this.querySelector('input[name="' + question + '"]:checked');
 
-  const options = document.getElementById("quizOptions");
-  options.innerHTML = "";
-
-  item.options.forEach((option, index) => {
-    const button = document.createElement("button");
-    button.className = "quiz-option";
-    button.textContent = option;
-    button.onclick = () => answerQuiz(index, button);
-    options.appendChild(button);
-  });
-
-  document.getElementById("quizFeedback").textContent = "";
-  document.getElementById("nextQuestion").style.display = "none";
-  document.getElementById("nextQuestion").textContent =
-    quizIndex === quiz.length - 1 ? "Volver a empezar" : "Siguiente pregunta";
-}
-
-function answerQuiz(index, selectedButton) {
-  if (quizAnswered) return;
-  quizAnswered = true;
-
-  const item = quiz[quizIndex];
-  const buttons = document.querySelectorAll(".quiz-option");
-
-  buttons.forEach((button, i) => {
-    button.disabled = true;
-    if (i === item.answer) button.classList.add("correct");
-  });
-
-  if (index === item.answer) {
-    document.getElementById("quizFeedback").textContent =
-      "¡Muy bien! " + item.explanation;
-  } else {
-    selectedButton.classList.add("incorrect");
-    document.getElementById("quizFeedback").textContent =
-      "Casi. " + item.explanation;
+    if (!selected) {
+      unanswered++;
+    } else if (selected.value === answers[question]) {
+      score++;
+    }
   }
 
-  document.getElementById("nextQuestion").style.display = "inline-block";
-}
+  const result = document.getElementById("quiz-result");
 
-function nextQuiz() {
-  quizIndex++;
-
-  if (quizIndex >= quiz.length) {
-    quizIndex = 0;
-    document.getElementById("quizQuestion").textContent =
-      "¡Has terminado el recorrido!";
-    document.getElementById("quizOptions").innerHTML = "";
-    document.getElementById("quizFeedback").textContent =
-      "Gracias por leer la revista. Puedes repetir el cuestionario para practicar.";
-    document.getElementById("nextQuestion").textContent = "Repetir cuestionario";
-    document.getElementById("nextQuestion").style.display = "inline-block";
-    document.getElementById("nextQuestion").onclick = () => {
-      document.getElementById("nextQuestion").onclick = nextQuiz;
-      renderQuiz();
-    };
+  if (unanswered > 0) {
+    result.textContent = "Te faltan " + unanswered +
+      " pregunta(s). Responde todas para ver tu resultado.";
     return;
   }
 
-  renderQuiz();
-}
-
-renderQuiz();
+  if (score === 5) {
+    result.textContent = "¡Excelente! " + score +
+      "/5 respuestas correctas. Dominaste el recorrido.";
+  } else if (score >= 3) {
+    result.textContent = "¡Vas bien! Obtuviste " + score +
+      "/5. Puedes revisar la revista para completar los detalles.";
+  } else {
+    result.textContent = "Obtuviste " + score +
+      "/5. ¡No pasa nada! Vuelve a recorrer la revista e inténtalo otra vez.";
+  }
+});
 </script>
+
 </body>
-        </html>
+      </html>
